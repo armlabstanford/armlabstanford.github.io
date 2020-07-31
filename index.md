@@ -39,7 +39,7 @@ For performing complex service tasks, we consider tasks that are complex in the 
 
 Our goal is to equip the robotic assistant to model its task/environment, plan actions that allow for achieving the complex task, and control toward the objective with the ability to account for varying disturbances.
 
-## Connected Devies
+## Connected Devices
 
 We consider connected devices as assistive technology when they are used to perform a service by leveraging collective knowledge about the environment and human user to take intelligent, service actions. The collective devices must leverage situational awareness to anticipate service actions.
 
