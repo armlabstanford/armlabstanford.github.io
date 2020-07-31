@@ -3,7 +3,7 @@
 Our stanford domain is: [armlab.stanford.edu](https://arm.stanford.edu/">arm.stanford.edu)
 
 <!-- ![armlab_logo](figures/arm_lab_logo_with_title_small_adj_6.png =250x) -->
-<img src="figures/arm_lab_logo_with_title_small_adj_6.png" width="250">
+<img src="figures/arm_lab_logo_with_title_small_adj_6.png" width="500">
 
 ## ARMLab Research
 
