@@ -1,2 +1,2 @@
 # ARMLab Domain
-(arm.stanford.edu)[www.arm.stanford.edu]
+[arm.stanford.edu](https://arm.stanford.edu/)
