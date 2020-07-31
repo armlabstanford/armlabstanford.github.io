@@ -1,18 +1,14 @@
-<h1>Assistive Robotics and Manipulation Laboratory (ARMLab)</h1>
+# Assistive Robotics and Manipulation Laboratory (ARMLab)
 
-<p>
-Our stanford domain is: <a href="https://arm.stanford.edu/">arm.stanford.edu</a>  
-</p>
+Our stanford domain is: [armlab.stanford.edu](https://arm.stanford.edu/">arm.stanford.edu)
 
-<img src="figures/arm_lab_logo_with_title_small_adj_6.png" alt="armlab_logo">
+![armlab_logo](figures/arm_lab_logo_with_title_small_adj_6.png)
 
+## ARMLab Research
 
-<h2>ARMLab Research</h2>
-
-<p>
 The broad research objective of the Assistive Robotics and Manipulation Lab is to develop technology that improves everyday life by anticipating and acting on the needs of human counterparts. We specialize in developing intelligent robotic systems that can perceive and model environments, humans and tasks and leverage these models to predict system processes and understand their assistive role. The research can be divided into the following sub-categories: robotic assistants, connected devices and intelligent wearables.  We use a combination of tools in dynamical systems analysis, control theory (classical, non-linear and robust control), state estimation and prediction, motion planning, vision for robotic autonomy and machine learning. Our lab focuses heavily on both the analytical and experimental components of assistive technology design. While our application area domain is autonomous assistive technology, our primary focus is robotic assistants (mobile manipulators and humanoids) with the goal of deployment for service tasks that may be highly dynamic and require dexterity, situational awareness, and human-robot collaboration. 
-</p>
 
+<!--
 <img src="https://github.com/armlabstanford/armlabstanford.github.io/blob/master/figures/project_scopes_0.png" alt="focus areas">
 <p>
 To be an effective teammate, the robot must be able to accurately model itself, the task and the human collaborator. 
@@ -50,3 +46,4 @@ A simplistic toy example in a house with connected devices would be the intellig
 <p>
 We define robotic wearables broadly as technology that directly augments the human user (e.g. prosthetic, exoskeleton or wheelchair).  As an assistive technology, we will develop intelligent wearables that leverage situational awareness (environment or task context) and human user observation to mobilize (allow or actively move the human) with transparency (the human feels virtually no resistance during motion or the motion was expected as the robotic system anticipated the desired motion). This approach differs from common approaches (which solely use sensory feedback either from sensory on-board the robot or sensors placed on the human), in that the ability for the robot to consider desired actions within the context of the environment or task allows the system to predict as oppose to just react. 
 </p>
+-->
