@@ -1,6 +1,6 @@
 # Assistive Robotics and Manipulation Laboratory (ARMLab)
 
-Our stanford domain is: [armlab.stanford.edu](https://arm.stanford.edu/">arm.stanford.edu)
+Our stanford domain is: [arm.stanford.edu](https://arm.stanford.edu/)
 
 <!-- ![armlab_logo](figures/arm_lab_logo_with_title_small_adj_6.png =250x) -->
 <p align="center">
