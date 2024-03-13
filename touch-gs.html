@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="description"
         content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="keywords" content="Gaussian Splatting, Monocular Depth, Gaussian Process Implicit Surface, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+  <title>Touch-GS: Visual-Tactile Supervised 3D Gaussian Splatting</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -32,7 +32,7 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="icon" href="./static/images/favicon.ico">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -162,16 +162,195 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="./static/images/splash.png"
-                 class="interpolation-image"
-                 alt="Splash Image." 
-                 style="width: 50%; height: auto; display: block; margin: 0 auto;"/>
+      <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+        <source src="./static/videos/final_renders.mp4"
+                type="video/mp4">
+      </video>
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Coming Soon</span>
+        <span class="dnerf">Touch-GS combines the power of vision and touch to generate high-quality few-shot and challenging scenes, such as few-shot object centric scenes, mirrors,
+          and transparent objects.</span>
       </h2>
     </div>
   </div>
 </section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 teaser">Abstract</h2>
+        <div class="content has-text-justified teaser">
+          <p>
+            We present a novel method to supervise 3D Gaussian Splatting (3DGS) scenes using optical tactile sensors. 
+            Optical tactile sensors have become widespread in their use in robotics for manipulation and object representation; however, raw optical tactile sensor data is unsuitable to directly supervise a 3DGS scene. Our representation leverages a Gaussian Process Implicit Surface to implicitly represent the object, combining many touches into a unified representation with uncertainty. 
+            We merge this model with a monocular depth estimation network which is aligned in a two stage process coarsely aligning with a depth camera and then finely adjusting to match our touch data. 
+            For every input color image, our method produces a corresponding fused depth and uncertainty map. Utilizing this additional information we propose a new loss function, variance weighted depth supervised loss. 
+            We leverage the DenseTact optical tactile sensor and RealSense RGB-D camera to show that combining touch and vision in this manner leads to quantitatively and qualitatively better results than vision or touch alone in a few-view scene syntheses on opaque as well as on reflective, and transparent objects.
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+            
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3 teaser">Method</h2>
+        
+        <div class="content has-text-justified teaser">
+          <p>
+            Our method leverages state-of-the-art monocular depth estimation and Gaussian Process Implicit Surfaces from touches along an object and optimally fuses them to train a Gaussian
+            Splatting model, or any other traditional NeRF. The monocular depth estimator gives us a coarse depth map, which we then align to real-world depths
+            with depth data from a noisy depth camera and further with our touch data. We then combine this with our Gaussian Process Implicit Surface, which provides a more finer depth map.
+            Finally, we can use a novel, uncertainty-weighted depth loss to train a NeRF on few view scenes, as well as mirrors and transparent objects, where vision alone fails.
+          </p>
+            <img src="./static/images/method.png"
+            alt="Method Image."
+            style="width: 100%; height: auto; display: block; margin: auto;"/>
+            
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3 teaser">Gaussian Process Implicit Surface</h2>
+        
+        <div class="content has-text-justified teaser">
+          <p>
+            We use a Gaussian Process Implicit Surface (GPIS) to represent a touched object. The GPIS seamelessly fuses many noisy touches into a 3D representation of the object with uncertainty.
+            The below images demonstrate how our GPIS is able to fill in the gaps between touches and still provide a smooth representation of the object, while still providing uncertainty.
+          </p>
+            <div id="banner">
+              <div class="inline-block-gpis">
+                  <img src ="./static/images/gpis.png">
+              </div>
+              <div class="inline-block-gpis-render">
+                  <img src ="./static/images/gpis_render.png">
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full-width teaser">
+        <h2 class="title is-3 ">Monocular Depth Estimation and Fusion</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            We perform a monocular depth estimation and alignment procedure, which consists of using the ZOEDepth monocular depth estimator to output a coarse depth.
+            We then align this depth with real world data from a Realsense to learn a scale factor and offset. 
+            Finally, we align this depth with our touch data with an offset. This output depth is used to compute an uncertainty map,
+            which is based on a simple heuristic that the uncertainty is proportional to the depth; higher depth predictions mean higher uncertainty.
+          </p>
+
+          <div id="banner">
+            <div class="inline-block-zoe">
+              <img src ="./static/images/rgb.png">
+            </div>
+            <div class="inline-block-zoe">
+                <img src ="./static/images/zoe.png">
+            </div>
+            <div class="inline-block-zoe">
+              <img src ="./static/images/zoe_uncertainty.png">
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full-width teaser">
+        <h2 class="title is-3 ">Method at a Glance</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            All combined, our method
+          </p>
+
+          <div id="banner">
+            <div class="inline-block-gpis-init">
+              <img src ="./static/images/method_stages.png">
+            </div>
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+
+    <div class="columns is-centered">
+      <div class="column is-full-width teaser">
+        <h2 class="title is-3">Results</h2>
+        <p>
+          We show our method 
+        </p>
+
+        <div class="content has-text-justified iframe-container">
+          <iframe frameborder="0" class="juxtapose" width="48%" height="500" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=4f1f8cac-e0cd-11ee-9685-5d0fb8b12f54"></iframe>
+          <iframe frameborder="0" class="juxtapose" width="48%" height="500" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=0befc3b4-e0cf-11ee-9685-5d0fb8b12f54"></iframe>
+        
+          <!-- <iframe frameborder="0" class="juxtapose" width="100%" height="720" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=8f7587d0-e0d1-11ee-9685-5d0fb8b12f54"></iframe>
+          <iframe frameborder="0" class="juxtapose" width="100%" height="720" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=d3ce1596-e0d1-11ee-9685-5d0fb8b12f54"></iframe>
+        
+          <iframe frameborder="0" class="juxtapose" width="100%" height="720" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=1af1fb04-e0d2-11ee-9685-5d0fb8b12f54"></iframe>
+          <iframe frameborder="0" class="juxtapose" width="100%" height="720" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=3fc065e2-e0d2-11ee-9685-5d0fb8b12f54"></iframe>
+          
+          <iframe frameborder="0" class="juxtapose" width="40%" height="720" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=da302d6a-e0d2-11ee-9685-5d0fb8b12f54"></iframe>
+          
+          <iframe frameborder="0" class="juxtapose" width="40%" height="720" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=073087ec-e0d3-11ee-9685-5d0fb8b12f54"></iframe>
+         -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <!-- <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a> -->
+      <a class="icon-link" href="https://github.com/armlabstanford" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            We graciously thank <a
+              href="https://nerfies.github.io">Nerfies</a> for providing the template for this website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer
 
 </body>
 </html>

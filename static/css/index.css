@@ -127,6 +127,40 @@ body {
   margin: 0;
 }
 
+.iframe-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.iframe {
+  margin: auto;
+}
+
+.inline-block-gpis {
+  display: inline-block;
+  max-width: 45%;
+  margin: 0 2.5%;
+
+}
+
+.inline-block-gpis-render {
+  display: inline-block;
+  max-width: 40%;
+
+}
+
+.inline-block-zoe {
+  display: inline-block;
+  max-width: 30%;
+
+}
+
+.inline-block-gpis-init {
+  display: inline-block;
+
+}
+
 
 .interpolation-panel {
   background: #f5f5f5;
@@ -135,6 +169,11 @@ body {
 
 .interpolation-panel .interpolation-image {
   width: 100%;
+  border-radius: 5px;
+}
+
+.gpis-image {
+  width: 50%;
   border-radius: 5px;
 }
 
