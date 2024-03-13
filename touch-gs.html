@@ -163,10 +163,27 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video id="dollyzoom" autoplay controls muted loop playsinline preload="metadata" height="100%">
+      <video id="splash-video" autoplay controls muted loop playsinline preload="metadata" height="100%">
         <source src="./static/videos/all-renders.mp4"
                 type="video/mp4">
       </video>
+      <script>
+        if ('IntersectionObserver' in window) {
+          // Use Intersection Observer for lazy loading the video
+          let videoObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const video = entry.target;
+                video.src = video.querySelector('source').src;
+                video.load();
+                videoObserver.unobserve(video);
+              }
+            });
+          }, {threshold: 0.75}); // Trigger when 75% of the video is visible
+      
+          videoObserver.observe(document.getElementById('splash-video'));
+        }
+      </script>
       <h2 class="subtitle has-text-centered">
         <span class="dnerf">Touch-GS combines the power of vision and touch to generate high-quality few-shot and challenging scenes, such as few-shot object centric scenes, mirrors,
           and transparent objects.</span>
