@@ -313,7 +313,7 @@
         </p>
 
         <div class="content is-centered gs-comp">
-          <b> Bunny Blender Scene</b>
+          <b> Bunny Blender Scene (5 input views)</b>
         </div>
         
         <div class="content has-text-justified iframe-container">
@@ -322,7 +322,7 @@
         </div>
 
         <div class="content is-centered gs-comp">
-          <b> Bunny Real Scene</b>
+          <b> Bunny Real Scene (8 input views)</b>
         </div>
         
         <div class="content has-text-justified iframe-container">
@@ -331,7 +331,7 @@
         </div>
 
         <div class="content is-centered gs-comp">
-          <b> Mirror Real Scene</b>
+          <b> Mirror Real Scene (151 input views)</b>
         </div>
         
         <div class="content has-text-justified iframe-container">
@@ -340,7 +340,7 @@
         </div>
 
         <div class="content is-centered gs-comp">
-          <b> Prism Real Scene</b>
+          <b> Prism Real Scene (58 input views)</b>
         </div>
         
         <div class="content has-text-justified iframe-container">
@@ -356,14 +356,241 @@
 
         <div class="content has-text-justified">
           <p>
-            We show ablations of our method
+            We show ablations of our method on the Blender simulated scene (RGB on the left, depth on the right) to highlight the advantages of our method.
           </p>
 
-          <div id="banner">
-            <div class="inline-block-gpis-init">
-              <img src ="./static/images/method_stages.png">
+          <div class="ablations-body">
+            <div class="content is-centered gs-comp">
+              <b> No Depth</b>
             </div>
+            <div class="videos-container">
+              <div class="video-wrapper">
+                <video id="video1" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/ablations-touch-gs/no-depth.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-wrapper">
+                <video id="video2" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/ablations-touch-gs/no-depth-depth.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
 
+          <div class="ablations-body">
+            <div class="content is-centered gs-comp">
+              <b> Sparse Depth</b>
+            </div>
+            <div class="videos-container">
+              <div class="video-wrapper">
+                <video id="video1" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/ablations-touch-gs/sparse-depth.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-wrapper">
+                <video id="video2" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/ablations-touch-gs/sparse-depth-depth.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <div class="ablations-body">
+            <div class="content is-centered gs-comp">
+              <b> Vision-based Dense Depth</b>
+            </div>
+            <div class="videos-container">
+              <div class="video-wrapper">
+                <video id="video1" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/ablations-touch-gs/ds-gs.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-wrapper">
+                <video id="video2" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/ablations-touch-gs/ds-gs-depth.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <div class="ablations-body">
+            <div class="content is-centered gs-comp">
+              <b> Poorly Tuned Vision-based Dense Depth</b>
+            </div>
+            <div class="videos-container">
+              <div class="video-wrapper">
+                <video id="video1" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/ablations-touch-gs/ds-gs-high.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-wrapper">
+                <video id="video2" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/ablations-touch-gs/ds-gs-high-depth.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <div class="ablations-body">
+            <div class="content is-centered gs-comp">
+              <b> Raw Depth from ZOEDepth</b>
+            </div>
+            <div class="videos-container">
+              <div class="video-wrapper">
+                <video id="video1" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/ablations-touch-gs/raw-zoe.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-wrapper">
+                <video id="video2" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/ablations-touch-gs/raw-zoe-depth.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <div class="ablations-body">
+            <div class="content is-centered gs-comp">
+              <b> Touch-Only Depth</b>
+            </div>
+            <div class="videos-container">
+              <div class="video-wrapper">
+                <video id="video1" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/ablations-touch-gs/gpis.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-wrapper">
+                <video id="video2" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/ablations-touch-gs/gpis-depth.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <div class="ablations-body">
+            <div class="content is-centered gs-comp">
+              <b> Touch-Only Depth Initializing With Touch Points</b>
+            </div>
+            <div class="videos-container">
+              <div class="video-wrapper">
+                <video id="video1" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/ablations-touch-gs/gpis-gs-init.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-wrapper">
+                <video id="video2" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/ablations-touch-gs/gpis-gs-init-depth.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <div class="ablations-body">
+            <div class="content is-centered gs-comp">
+              <b> Full Method, No Uncertainty and Touch Point Initialization</b>
+            </div>
+            <div class="videos-container">
+              <div class="video-wrapper">
+                <video id="video1" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/ablations-touch-gs/fused-no-gs-init-no-uncertainty.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-wrapper">
+                <video id="video2" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/ablations-touch-gs/fused-no-gs-init-no-uncertainty-depth.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <div class="ablations-body">
+            <div class="content is-centered gs-comp">
+              <b> Full Method, No Uncertainty</b>
+            </div>
+            <div class="videos-container">
+              <div class="video-wrapper">
+                <video id="video1" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/ablations-touch-gs/full-method-no-uncertainty.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-wrapper">
+                <video id="video2" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/ablations-touch-gs/full-method-no-uncertainty-depth.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <div class="ablations-body">
+            <div class="content is-centered gs-comp">
+              <b> Full Method</b>
+            </div>
+            <div class="videos-container">
+              <div class="video-wrapper">
+                <video id="video1" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/ablations-touch-gs/full-method.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-wrapper">
+                <video id="video2" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/ablations-touch-gs/full-method-depth.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+          
+          <div class="ablations-body">
+            <div class="content is-centered gs-comp">
+              <b> Full Method trained on Ground Truth Depth</b>
+            </div>
+            <div class="videos-container">
+              <div class="video-wrapper">
+                <video id="video1" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/ablations-touch-gs/gt.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-wrapper">
+                <video id="video2" autoplay controls muted loop playsinline>
+                  <source src="./static/videos/ablations-touch-gs/gt-depth.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full-width teaser">
+        <h2 class="title is-3 ">Visualizations</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            We include interactive visualizations of trained splats on our method to highlight the advantages of our method.
+          </p>
+
+          <div class="content is-centered gs-comp">
+            5 Input Views / Top: <b>Touch-GS</b> / Bottom: <b>Depth-GS</b>
+          </div>
+          
+          <div class="iframe-container">
+            <iframe src='https://my.spline.design/untitled-f428ed41b553fcdaf286de1a1399b1f1/' frameborder='0' width='48%' height='400px'></iframe>
+            <iframe src='https://my.spline.design/bunnyblenderdensedepth-ce426e3ba02055dd9aef6f09f2492d97/' frameborder='0' width='50%' height='400px'></iframe>
+          </div>
+          
+          <div class="content is-centered gs-comp">
+            8 Input Views / Top: <b>Touch-GS</b> / Bottom: <b>Depth-GS</b>
+          </div>
+          
+          <div class="iframe-container">
+            <iframe src='https://my.spline.design/bunnyrealtouchgs-19298035e2534b454937f0070c9114fd/' frameborder='0' width='48%' height='400px'></iframe>
+            <iframe src='https://my.spline.design/untitled-7b1ee2c9219a6b6c66e8ada72f67855f/' frameborder='0' width='48%' height='400px'></iframe>
+          </div>
+          
+          <div class="content is-centered gs-comp">
+            <b>Navigate</b>: click and drag / <b>Zoom</b>: shift and scroll 
+          </div>
           </div>
           
         </div>
