@@ -2,6 +2,11 @@ body {
   font-family: 'Noto Sans', sans-serif;
 }
 
+.gs-comp {
+  text-align: center;
+  font-size: 1.2em;
+}
+
 
 .footer .icon-link {
     font-size: 25px;
@@ -20,7 +25,12 @@ body {
 
 .teaser .hero-body {
   padding-top: 0;
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
+}
+
+.ablations-body {
+  padding-top: 0;
+  padding-bottom: 1rem;
 }
 
 .teaser {
@@ -127,6 +137,72 @@ body {
   margin: 0;
 }
 
+.videos-container {
+  display: flex; /* This will layout children (video wrappers) in a row */
+  justify-content: center; /* This will center the videos in the container */
+  align-items: center; /* This will vertically align videos if they have different heights */
+  flex-wrap: wrap; /* This allows wrapping onto the next line if not enough space */
+}
+
+.video-wrapper {
+  flex: 1; /* This will make each video take up equal space */
+  margin: 5px; /* This provides space between the videos */
+}
+
+video {
+  width: 100%; /* This will make the video fill its container */
+  height: auto; /* This will maintain the aspect ratio of the video */
+}
+
+@media screen and (max-width: 768px) {
+  .video-wrapper {
+    width: 100%; /* On small screens, take up the full width */
+  }
+}
+
+
+.iframe-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.spline-iframe-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px; /* This adds 10 pixels of space on the left and right of each iframe */
+  height: 400px; /* Keep as is if the height is fine */
+}
+
+.iframe {
+  margin: auto;
+}
+
+.inline-block-gpis {
+  display: inline-block;
+  max-width: 45%;
+  margin: 0 2.5%;
+
+}
+
+.inline-block-gpis-render {
+  display: inline-block;
+  max-width: 40%;
+
+}
+
+.inline-block-zoe {
+  display: inline-block;
+  max-width: 30%;
+
+}
+
+.inline-block-gpis-init {
+  display: inline-block;
+
+}
+
 
 .interpolation-panel {
   background: #f5f5f5;
@@ -135,6 +211,11 @@ body {
 
 .interpolation-panel .interpolation-image {
   width: 100%;
+  border-radius: 5px;
+}
+
+.gpis-image {
+  width: 50%;
   border-radius: 5px;
 }
 
