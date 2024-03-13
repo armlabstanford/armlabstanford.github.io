@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+        content="Touch-GS combines the power of vision and touch to generate high-quality few-shot and challenging scenes, such as few-shot object centric scenes, mirrors,
+        and transparent objects.">
   <meta name="keywords" content="Gaussian Splatting, Monocular Depth, Gaussian Process Implicit Surface, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Touch-GS: Visual-Tactile Supervised 3D Gaussian Splatting</title>
@@ -285,7 +286,10 @@
 
         <div class="content has-text-justified">
           <p>
-            All combined, our method
+            Combined, our method can be shown as a). a RGB image which b). we compute a depth map from ZOEDepth
+            and c). a vision uncertainty map. In the touch pipeline, we use the DenseTact sensor to get a set of 
+            e). touches across an object. We use the GPIS representation to compute f). depth and g) uncertainty.
+            We finally construct the optimally fused d). depth and h). uncertainty.
           </p>
 
           <div id="banner">
@@ -304,27 +308,64 @@
       <div class="column is-full-width teaser">
         <h2 class="title is-3">Results</h2>
         <p>
-          We show our method 
+          We show our method on novel views compared to the baseline of only using vision based depth in a simulated scene and a few challenging real-world scenes.
+          Each scene below consists of a RGB and depth comparison between DS-GS (only vision for depth) and Touch-GS.
         </p>
 
-        <div class="content is-centered">
-          DS-GS vs. Touch-GS
+        <div class="content is-centered gs-comp">
+          <b> Bunny Blender Scene</b>
         </div>
         
         <div class="content has-text-justified iframe-container">
           <iframe frameborder="0" class="juxtapose" width="48%" height="500" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=4f1f8cac-e0cd-11ee-9685-5d0fb8b12f54"></iframe>
           <iframe frameborder="0" class="juxtapose" width="48%" height="500" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=0befc3b4-e0cf-11ee-9685-5d0fb8b12f54"></iframe>
+        </div>
+
+        <div class="content is-centered gs-comp">
+          <b> Bunny Real Scene</b>
+        </div>
         
-          <!-- <iframe frameborder="0" class="juxtapose" width="100%" height="720" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=8f7587d0-e0d1-11ee-9685-5d0fb8b12f54"></iframe>
-          <iframe frameborder="0" class="juxtapose" width="100%" height="720" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=d3ce1596-e0d1-11ee-9685-5d0fb8b12f54"></iframe>
+        <div class="content has-text-justified iframe-container">
+          <iframe frameborder="0" class="juxtapose" width="48%" height="360" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=8f7587d0-e0d1-11ee-9685-5d0fb8b12f54"></iframe>
+          <iframe frameborder="0" class="juxtapose" width="48%" height="360" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=d3ce1596-e0d1-11ee-9685-5d0fb8b12f54"></iframe>
+        </div>
+
+        <div class="content is-centered gs-comp">
+          <b> Mirror Real Scene</b>
+        </div>
         
-          <iframe frameborder="0" class="juxtapose" width="100%" height="720" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=1af1fb04-e0d2-11ee-9685-5d0fb8b12f54"></iframe>
-          <iframe frameborder="0" class="juxtapose" width="100%" height="720" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=3fc065e2-e0d2-11ee-9685-5d0fb8b12f54"></iframe>
+        <div class="content has-text-justified iframe-container">
+          <iframe frameborder="0" class="juxtapose" width="48%" height="360" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=da302d6a-e0d2-11ee-9685-5d0fb8b12f54"></iframe>
+          <iframe frameborder="0" class="juxtapose" width="48%" height="360" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=073087ec-e0d3-11ee-9685-5d0fb8b12f54"></iframe>
+        </div>
+
+        <div class="content is-centered gs-comp">
+          <b> Prism Real Scene</b>
+        </div>
+        
+        <div class="content has-text-justified iframe-container">
+          <iframe frameborder="0" class="juxtapose" width="48%" height="360" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=1af1fb04-e0d2-11ee-9685-5d0fb8b12f54"></iframe>
+          <iframe frameborder="0" class="juxtapose" width="48%" height="360" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=3fc065e2-e0d2-11ee-9685-5d0fb8b12f54"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full-width teaser">
+        <h2 class="title is-3 ">Ablations</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            We show ablations of our method
+          </p>
+
+          <div id="banner">
+            <div class="inline-block-gpis-init">
+              <img src ="./static/images/method_stages.png">
+            </div>
+
+          </div>
           
-          <iframe frameborder="0" class="juxtapose" width="40%" height="720" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=da302d6a-e0d2-11ee-9685-5d0fb8b12f54"></iframe>
-          
-          <iframe frameborder="0" class="juxtapose" width="40%" height="720" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=073087ec-e0d3-11ee-9685-5d0fb8b12f54"></iframe>
-         -->
         </div>
       </div>
     </div>
