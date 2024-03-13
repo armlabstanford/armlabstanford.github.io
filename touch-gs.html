@@ -179,7 +179,7 @@
                 videoObserver.unobserve(video);
               }
             });
-          }, {threshold: 0.75}); // Trigger when 75% of the video is visible
+          }, {threshold: 0.50}); // Trigger when 75% of the video is visible
       
           videoObserver.observe(document.getElementById('splash-video'));
         }
