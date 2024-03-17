@@ -38,7 +38,7 @@
             observer.unobserve(video); // Stop observing the loaded video
           }
         });
-      }, {threshold: 0.5}); // Trigger when at least 50% of the video is visible
+      }, {threshold: 0.1}); // Trigger when at least 10% of the video is visible
 
       videos.forEach(video => {
         observer.observe(video);
@@ -188,7 +188,7 @@
                 videoObserver.unobserve(video);
               }
             });
-          }, {threshold: 0.50}); // Trigger when 75% of the video is visible
+          }, {threshold: 0.10}); // Trigger when 75% of the video is visible
       
           videoObserver.observe(document.getElementById('splash-video'));
         }
