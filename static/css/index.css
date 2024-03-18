@@ -155,11 +155,16 @@ video {
 }
 
 @media screen and (max-width: 768px) {
-  .video-wrapper {
-    width: 100%; /* On small screens, take up the full width */
+  .juxtapose {
+    width: 48%; /* On small screens, take up the full width */
   }
 }
 
+@media screen and (min-width: 769px) {
+  .juxtapose {
+    height: 360px;
+  }
+}
 
 .iframe-container {
   display: flex;
