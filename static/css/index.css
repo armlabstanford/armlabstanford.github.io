@@ -237,3 +237,14 @@ video {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+.viz {
+  display: none;
+}
+
+/* Display the .columns div on screens wider than 768px */
+@media screen and (min-width: 769px) {
+  .viz {
+    display: block;
+  }
+}
