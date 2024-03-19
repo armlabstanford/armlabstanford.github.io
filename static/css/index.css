@@ -161,6 +161,10 @@ video {
   .juxtapose {
     height: 360px;
   }
+
+  .juxtapose-t {
+    height: 500px;
+  }
 }
 
 .iframe-container {
