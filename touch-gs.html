@@ -95,6 +95,7 @@
         <div class="container is-max-desktop">
           <div class="columns is-centered">
             <div class="column has-text-centered">
+              
               <h1 class="title is-1 publication-title">Touch-GS: Visual-Tactile
                 Supervised 3D Gaussian Splatting</h1>
               <div class="is-size-5 publication-authors">
@@ -244,7 +245,7 @@
                   robotics for manipulation and object representation; however,
                   raw optical tactile sensor data is unsuitable to directly
                   supervise a 3DGS scene. Our representation leverages a
-                  Gaussian Process Implicit Surface to implicitly represent the
+                  <b>Gaussian Process Implicit Surface</b> to implicitly represent the
                   object, combining many touches into a unified representation
                   with uncertainty.
                   We merge this model with a monocular depth estimation network
@@ -253,17 +254,19 @@
                   data.
                   For every input color image, our method produces a
                   corresponding fused depth and uncertainty map. Utilizing this
-                  additional information we propose a new loss function,
+                  additional information, we propose a new loss function,
                   variance weighted depth supervised loss.
                   We leverage the DenseTact optical tactile sensor and RealSense
-                  RGB-D camera to show that combining touch and vision in this
+                  RGB-D camera, deploying both on a Kinova Gen3 robot, to show that combining touch and vision in this
                   manner leads to quantitatively and qualitatively better
                   results than vision or touch alone in a few-view scene
                   syntheses on opaque as well as on reflective, and transparent
-                  objects.
+                  objects. Our method is highlighted below, where prior methods fail to reconstruct the geometry of a mirror.
+                </p>
                 </div>
               </div>
             </div>
+            
             <!--/ Abstract. -->
 
             <!-- Paper video. -->
@@ -282,6 +285,17 @@
 
         <section class="section">
           <div class="container is-max-desktop">
+            
+            <div class="columns is-centered">
+              <div class="column is-full-width">
+
+                <div class="content has-text-justified teaser">
+                  <img src="./static/images/splash-web.png"
+                alt="Method Image."
+                style="width: 100%" />
+                </div>
+              </div>
+            </div>
 
             <div class="columns is-centered">
               <div class="column is-full-width">
