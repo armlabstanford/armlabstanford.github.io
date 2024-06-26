@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description"
+      content="ProACT allows researchers to prototype intent estimation for prosthetic arm control.">
+    <meta name="keywords"
+      content="Prosthetics, Shared control, Shared autonomy, Augmented Reality, Box and Blocks">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ProACT: An Augmented Reality Testbed for Intelligent Prosthetic Arms</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var videos = document.querySelectorAll('.lazy-load-video');
+
+      var observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            var video = entry.target;
+            var source = video.querySelector('source');
+            source.src = source.dataset.src;
+            video.load(); // Load the video
+            video.classList.add('loaded'); // Optional: mark it as loaded
+            observer.unobserve(video); // Stop observing the loaded video
+          }
+        });
+      }, {threshold: 0.1}); // Trigger when at least 10% of the video is visible
+
+      videos.forEach(video => {
+        observer.observe(video);
+      });
+    });
+  </script>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+      rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="icon" href="./static/images/favicon.ico">
+
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+  </head>
+  <body>
+
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a role="button" class="navbar-burger" aria-label="menu"
+          aria-expanded="false">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="navbar-menu">
+        <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+          <a class="navbar-item" href="https://arm.stanford.edu/">
+            <span class="icon">
+              <i class="fas fa-home"></i>
+            </span>
+          </a>
+        </div>
+
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              
+              <h1 class="title is-1 publication-title">Touch-GS: Visual-Tactile
+                Supervised 3D Gaussian Splatting</h1>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">
+                  <a href="https://aidenswann.com/">Aiden Swann*</a>,</span>
+                <span class="author-block">
+                  <a href="https://peasant98.github.io/">Matthew Strong*,</span>
+                  <span class="author-block">
+                    <a href="https://wonkyungdo.github.io/website_wkdo/">Won
+                      Kyung Do</a>,
+                  </span>
+                  <span class="author-block">
+                    <a href="https://msl.stanford.edu/people/gadielsznaiercamps">Gadiel
+                      Sznaier Camps</a>,
+                  </span>
+                  <span class="author-block">
+                    <a href="https://web.stanford.edu/~schwager/">Mac Schwager</a>,
+                  </span>
+                  <span class="author-block">
+                    <a href="https://monroekennedy3.com/">Monroe Kennedy III</a>
+                  </span>
+                </div>
+
+                <div class="is-size-5 publication-authors">
+                  <span class="author-block">Stanford University</span>
+                  <br>
+                  <br>
+                  <a href="https://arm.stanford.edu/" style="display: inline-block; width: 30%; margin-right: 20px;">
+                    <img src="./static/images/armlab-logo.png" alt="Armlab Logo" style="width: 100%;">
+                  </a>
+                  <a href="https://msl.stanford.edu/" style="display: inline-block; width: 20%;">
+                    <img src="./static/images/msl-logo.png" alt="MSL Logo" style="width: 100%;">
+                  </a>
+                </div>
+
+                <div class="column has-text-centered">
+                  <div class="publication-links">
+                    <span class="link-block">
+                      <a href="https://arxiv.org/pdf/2403.09875.pdf"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+                    <span class="link-block">
+                      <a href="https://arxiv.org/abs/2403.09875"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="ai ai-arxiv"></i>
+                        </span>
+                        <span>arXiv</span>
+                      </a>
+                    </span>
+                    <span class="link-block">
+                      <a href="https://www.youtube.com/watch?v=FqejaTEt7aU"
+                         class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                            <i class="fab fa-youtube"></i>
+                        </span>
+                        <span>Video</span>
+                      </a>
+                    </span>
+                    <span class="link-block">
+                      <a href="https://github.com/armlabstanford/Touch-GS"
+                         class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                            <i class="fab fa-github"></i>
+                        </span>
+                        <span>Code</span>
+                        </a>
+                    </span>
+                    <!-- <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+                    <!-- <span class="link-block">
+                <a href="https://github.com/armlabstanford/Touch-GS"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span> -->
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="hero teaser">
+        <div class="container is-max-desktop">
+          <div class="hero-body">
+            <video id="splash-video" autoplay controls muted loop playsinline
+              preload="metadata" height="100%">
+              <source src="./static/videos/all-renders.mp4"
+                type="video/mp4">
+            </video>
+            <script>
+        if ('IntersectionObserver' in window) {
+          // Use Intersection Observer for lazy loading the video
+          let videoObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const video = entry.target;
+                video.src = video.querySelector('source').src;
+                video.load();
+                videoObserver.unobserve(video);
+              }
+            });
+          }, {threshold: 0.10}); // Trigger when 75% of the video is visible
+      
+          videoObserver.observe(document.getElementById('splash-video'));
+        }
+      </script>
+            <h2 class="subtitle has-text-centered">
+              <span class="dnerf">Touch-GS combines the power of vision and
+                touch to generate high-quality few-shot and challenging scenes,
+                such as few-view object centric scenes, mirrors,
+                and transparent objects.</span>
+            </h2>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container is-max-desktop">
+          <!-- Abstract. -->
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <h2 class="title is-3 teaser">Abstract</h2>
+              <div class="content has-text-justified teaser">
+                <p>
+                  We present a novel method to supervise 3D Gaussian Splatting
+                  (3DGS) scenes using optical tactile sensors.
+                  Optical tactile sensors have become widespread in their use in
+                  robotics for manipulation and object representation; however,
+                  raw optical tactile sensor data is unsuitable to directly
+                  supervise a 3DGS scene. Our representation leverages a
+                  <b>Gaussian Process Implicit Surface</b> to implicitly represent the
+                  object, combining many touches into a unified representation
+                  with uncertainty.
+                  We merge this model with a monocular depth estimation network
+                  which is aligned in a two stage process coarsely aligning with
+                  a depth camera and then finely adjusting to match our touch
+                  data.
+                  For every input color image, our method produces a
+                  corresponding fused depth and uncertainty map. Utilizing this
+                  additional information, we propose a new loss function,
+                  variance weighted depth supervised loss.
+                  We leverage the DenseTact optical tactile sensor and RealSense
+                  RGB-D camera, deploying both on a Kinova Gen3 robot, to show that combining touch and vision in this
+                  manner leads to quantitatively and qualitatively better
+                  results than vision or touch alone in a few-view scene
+                  syntheses on opaque as well as on reflective, and transparent
+                  objects. Our method is highlighted below, where prior methods fail to reconstruct the geometry of a mirror.
+                </p>
+                </div>
+              </div>
+            </div>
+            
+            <!--/ Abstract. -->
+
+            <!-- Paper video. -->
+            <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+            <!--/ Paper video. -->
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container is-max-desktop">
+            
+            <div class="columns is-centered">
+              <div class="column is-full-width">
+
+                <div class="content has-text-justified teaser">
+                  <img src="./static/images/splash-web.png"
+                alt="Method Image."
+                style="width: 100%" />
+                </div>
+              </div>
+            </div>
+
+            <div class="columns is-centered">
+              <div class="column is-full-width">
+                <h2 class="title is-3 teaser">Method</h2>
+
+                <div class="content has-text-justified teaser">
+                  <p>
+                    Our method leverages state-of-the-art monocular depth
+                    estimation and Gaussian Process Implicit Surfaces from
+                    touches along an object and optimally fuses them to train a
+                    Gaussian
+                    Splatting model, or any other traditional NeRF. The
+                    monocular depth estimator gives us a coarse depth map, which
+                    we then align to real-world depths
+                    with depth data from a noisy depth camera and further with
+                    our touch data. We then combine this with our Gaussian
+                    Process Implicit Surface, which provides a more finer depth
+                    map.
+                    Finally, we can use a novel, uncertainty-weighted depth loss
+                    to train a NeRF on few view scenes, as well as mirrors and
+                    transparent objects, where vision alone fails.
+                  </p>
+                  <img src="./static/images/method.png"
+                    alt="Method Image."
+                    style="width: 100%; height: auto; display: block; margin: auto;" />
+
+                </div>
+              </div>
+            </div>
+
+            <div class="columns is-centered">
+              <div class="column is-full-width">
+                <h2 class="title is-3 teaser">Gaussian Process Implicit Surface</h2>
+
+                <div class="content has-text-justified teaser">
+                  <p>
+                    We use a Gaussian Process Implicit Surface (GPIS) to
+                    represent a touched object. The GPIS seamelessly fuses many
+                    noisy touches into a 3D representation of the object with
+                    uncertainty.
+                    The below images demonstrate how our GPIS is able to fill in
+                    the gaps between touches and still provide a smooth
+                    representation of the object, while still providing
+                    uncertainty.
+                  </p>
+                  <div id="banner">
+                    <div class="inline-block-gpis">
+                      <img src="./static/images/gpis.png">
+                    </div>
+                    <div class="inline-block-gpis-render">
+                      <img src="./static/images/gpis_render.png">
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="columns is-centered">
+              <div class="column is-full-width teaser">
+                <h2 class="title is-3 ">Monocular Depth Estimation and Fusion</h2>
+
+                <div class="content has-text-justified">
+                  <p>
+                    We perform a monocular depth estimation and alignment
+                    procedure, which consists of using the ZOEDepth monocular
+                    depth estimator to output a coarse depth.
+                    We then align this depth with real world data from a
+                    Realsense to learn a scale factor and offset.
+                    Finally, we align this depth with our touch data with an
+                    offset. This output depth is used to compute an uncertainty
+                    map,
+                    which is based on a simple heuristic that the uncertainty is
+                    proportional to the depth; higher depth predictions mean
+                    higher uncertainty.
+                  </p>
+
+                  <div class="columns is-centered">
+                    <div id="banner">
+                      <div class="inline-block-zoe">
+                        <img src="./static/images/rgb.png">
+                      </div>
+                      <div class="inline-block-zoe">
+                        <img src="./static/images/zoe.png">
+                      </div>
+                      <div class="inline-block-zoe">
+                        <img src="./static/images/zoe_uncertainty.png">
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="columns is-centered">
+              <div class="column is-full-width teaser">
+                <h2 class="title is-3 ">Method at a Glance</h2>
+
+                <div class="content has-text-justified">
+                  <p>
+                    Combined, our method can be shown as a). a RGB image which
+                    b). we compute a depth map from ZOEDepth
+                    and c). a vision uncertainty map. In the touch pipeline, we
+                    use the DenseTact sensor to get a set of
+                    e). touches across an object. We use the GPIS representation
+                    to compute f). depth and g) uncertainty.
+                    We finally construct the optimally fused d). depth and h).
+                    uncertainty.
+                  </p>
+
+                  <div id="banner">
+                    <div class="inline-block-gpis-init">
+                      <img src="./static/images/method_stages.png">
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="columns is-centered">
+              <div class="column is-full-width teaser">
+                <h2 class="title is-3">Results</h2>
+                <p>
+                  We show our method on novel views compared to the baseline of
+                  only using vision based depth in a simulated scene and a few
+                  challenging real-world scenes.
+                  Each scene below consists of a <b>RGB</b> and <b>depth</b>
+                  comparison between DS-GS (only vision for depth) and Touch-GS.
+                  Our method is on the right side of the slider.
+                </p>
+
+                <div class="content is-centered gs-comp">
+                  <b> Bunny Blender Scene (5 input views)</b>
+                </div>
+
+                <div class="content has-text-justified iframe-container">
+                  <iframe frameborder="0" class="juxtapose-t" width="48%"
+                    src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=4f1f8cac-e0cd-11ee-9685-5d0fb8b12f54"></iframe>
+                  <iframe frameborder="0" class="juxtapose-t" width="48%"
+                    src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=0befc3b4-e0cf-11ee-9685-5d0fb8b12f54"></iframe>
+                </div>
+
+                <div class="content is-centered gs-comp">
+                  <b> Bunny Real Scene (8 input views)</b>
+                </div>
+
+                <div class="content has-text-justified iframe-container">
+                  <iframe frameborder="0" class="juxtapose" width="48%"
+                    src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=8f7587d0-e0d1-11ee-9685-5d0fb8b12f54"></iframe>
+                  <iframe frameborder="0" class="juxtapose" width="48%"
+                    src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=d3ce1596-e0d1-11ee-9685-5d0fb8b12f54"></iframe>
+                </div>
+
+                <div class="content is-centered gs-comp">
+                  <b> Mirror Real Scene (151 input views)</b>
+                </div>
+
+                <div class="content has-text-justified iframe-container">
+                  <iframe frameborder="0" class="juxtapose" width="48%"
+                    src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=da302d6a-e0d2-11ee-9685-5d0fb8b12f54"></iframe>
+                  <iframe frameborder="0" class="juxtapose" width="48%"
+                    src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=073087ec-e0d3-11ee-9685-5d0fb8b12f54"></iframe>
+                </div>
+
+                <div class="content is-centered gs-comp">
+                  <b> Prism Real Scene (58 input views)</b>
+                </div>
+
+                <div class="content has-text-justified iframe-container">
+                  <iframe frameborder="0" class="juxtapose" width="48%"
+                    src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=1af1fb04-e0d2-11ee-9685-5d0fb8b12f54"></iframe>
+                  <iframe frameborder="0" class="juxtapose" width="48%"
+                    src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=3fc065e2-e0d2-11ee-9685-5d0fb8b12f54"></iframe>
+                </div>
+              </div>
+            </div>
+
+            <div class="columns is-centered">
+              <div class="column is-full-width teaser">
+                <h2 class="title is-3 ">Ablations</h2>
+
+                <div class="content has-text-justified">
+                  <p>
+                    We show ablations of our method on the Blender simulated
+                    scene (RGB on the left, depth on the right) to highlight the
+                    advantages of our method.
+                  </p>
+
+                  <div class="ablations-body">
+                    <div class="content is-centered gs-comp">
+                      <b> No Depth</b>
+                    </div>
+                    <div class="videos-container">
+                      <div class="video-wrapper">
+                        <video id="lazyVideo" class="lazy-load-video" autoplay
+                          controls muted loop playsinline preload="none">
+                          <source
+                            data-src="./static/videos/ablations-touch-gs/no-depth.mp4"
+                            type="video/mp4">
+                        </video>
+                      </div>
+                      <div class="video-wrapper">
+                        <video id="video2" class="lazy-load-video" autoplay
+                          controls muted loop playsinline preload="none">
+                          <source
+                            data-src="./static/videos/ablations-touch-gs/no-depth-depth.mp4"
+                            type="video/mp4">
+                        </video>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="ablations-body">
+                    <div class="content is-centered gs-comp">
+                      <b> Sparse Depth</b>
+                    </div>
+                    <div class="videos-container">
+                      <div class="video-wrapper">
+                        <video id="video1" class="lazy-load-video" autoplay
+                          controls muted loop playsinline preload="none">
+                          <source
+                            data-src="./static/videos/ablations-touch-gs/sparse-depth.mp4"
+                            type="video/mp4">
+                        </video>
+                      </div>
+                      <div class="video-wrapper">
+                        <video id="video2" class="lazy-load-video" autoplay
+                          controls muted loop playsinline preload="none">
+                          <source
+                            data-src="./static/videos/ablations-touch-gs/sparse-depth-depth.mp4"
+                            type="video/mp4">
+                        </video>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="ablations-body">
+                    <div class="content is-centered gs-comp">
+                      <b> Vision-based Dense Depth</b>
+                    </div>
+                    <div class="videos-container">
+                      <div class="video-wrapper">
+                        <video id="video1" class="lazy-load-video" autoplay
+                          controls muted loop playsinline preload="none">
+                          <source
+                            data-src="./static/videos/ablations-touch-gs/ds-gs.mp4"
+                            type="video/mp4">
+                        </video>
+                      </div>
+                      <div class="video-wrapper">
+                        <video id="video2" class="lazy-load-video" autoplay
+                          controls muted loop playsinline preload="none">
+                          <source
+                            data-src="./static/videos/ablations-touch-gs/ds-gs-depth.mp4"
+                            type="video/mp4">
+                        </video>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="ablations-body">
+                    <div class="content is-centered gs-comp">
+                      <b> Poorly Tuned Vision-based Dense Depth</b>
+                    </div>
+                    <div class="videos-container">
+                      <div class="video-wrapper">
+                        <video id="video1" class="lazy-load-video" autoplay
+                          controls muted loop playsinline preload="none">
+                          <source
+                            data-src="./static/videos/ablations-touch-gs/ds-gs-high.mp4"
+                            type="video/mp4">
+                        </video>
+                      </div>
+                      <div class="video-wrapper">
+                        <video id="video2" class="lazy-load-video" autoplay
+                          controls muted loop playsinline preload="none">
+                          <source
+                            data-src="./static/videos/ablations-touch-gs/ds-gs-high-depth.mp4"
+                            type="video/mp4">
+                        </video>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="ablations-body">
+                    <div class="content is-centered gs-comp">
+                      <b> Raw Depth from ZOEDepth</b>
+                    </div>
+                    <div class="videos-container">
+                      <div class="video-wrapper">
+                        <video id="video1" class="lazy-load-video" autoplay
+                          controls muted loop playsinline preload="none">
+                          <source
+                            data-src="./static/videos/ablations-touch-gs/raw-zoe.mp4"
+                            type="video/mp4">
+                        </video>
+                      </div>
+                      <div class="video-wrapper">
+                        <video id="video2" class="lazy-load-video" autoplay
+                          controls muted loop playsinline preload="none">
+                          <source
+                            data-src="./static/videos/ablations-touch-gs/raw-zoe-depth.mp4"
+                            type="video/mp4">
+                        </video>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="ablations-body">
+                    <div class="content is-centered gs-comp">
+                      <b> Touch-Only Depth</b>
+                    </div>
+                    <div class="videos-container">
+                      <div class="video-wrapper">
+                        <video id="video1" class="lazy-load-video" autoplay
+                          controls muted loop playsinline preload="none">
+                          <source
+                            data-src="./static/videos/ablations-touch-gs/gpis.mp4"
+                            type="video/mp4">
+                        </video>
+                      </div>
+                      <div class="video-wrapper">
+                        <video id="video2" class="lazy-load-video" autoplay
+                          controls muted loop playsinline preload="none">
+                          <source
+                            data-src="./static/videos/ablations-touch-gs/gpis-depth.mp4"
+                            type="video/mp4">
+                        </video>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="ablations-body">
+                    <div class="content is-centered gs-comp">
+                      <b> Touch-Only Depth Initializing With Touch Points</b>
+                    </div>
+                    <div class="videos-container">
+                      <div class="video-wrapper">
+                        <video id="video1" class="lazy-load-video" autoplay
+                          controls muted loop playsinline preload="none">
+                          <source
+                            data-src="./static/videos/ablations-touch-gs/gpis-gs-init.mp4"
+                            type="video/mp4">
+                        </video>
+                      </div>
+                      <div class="video-wrapper">
+                        <video id="video2" class="lazy-load-video" autoplay
+                          controls muted loop playsinline preload="none">
+                          <source
+                            data-src="./static/videos/ablations-touch-gs/gpis-gs-init-depth.mp4"
+                            type="video/mp4">
+                        </video>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="ablations-body">
+                    <div class="content is-centered gs-comp">
+                      <b> Full Method, No Uncertainty and Touch Point
+                        Initialization</b>
+                    </div>
+                    <div class="videos-container">
+                      <div class="video-wrapper">
+                        <video id="video1" class="lazy-load-video" autoplay
+                          controls muted loop playsinline preload="none">
+                          <source
+                            data-src="./static/videos/ablations-touch-gs/fused-no-gs-init-no-uncertainty.mp4"
+                            type="video/mp4">
+                        </video>
+                      </div>
+                      <div class="video-wrapper">
+                        <video id="video2" class="lazy-load-video" autoplay
+                          controls muted loop playsinline preload="none">
+                          <source
+                            data-src="./static/videos/ablations-touch-gs/fused-no-gs-init-no-uncertainty-depth.mp4"
+                            type="video/mp4">
+                        </video>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="ablations-body">
+                    <div class="content is-centered gs-comp">
+                      <b> Full Method, No Uncertainty</b>
+                    </div>
+                    <div class="videos-container">
+                      <div class="video-wrapper">
+                        <video id="video1" class="lazy-load-video" autoplay
+                          controls muted loop playsinline preload="none">
+                          <source
+                            data-src="./static/videos/ablations-touch-gs/full-method-no-uncertainty.mp4"
+                            type="video/mp4">
+                        </video>
+                      </div>
+                      <div class="video-wrapper">
+                        <video id="video2" class="lazy-load-video" autoplay
+                          controls muted loop playsinline preload="none">
+                          <source
+                            data-src="./static/videos/ablations-touch-gs/full-method-no-uncertainty-depth.mp4"
+                            type="video/mp4">
+                        </video>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="ablations-body">
+                    <div class="content is-centered gs-comp">
+                      <b> Full Method</b>
+                    </div>
+                    <div class="videos-container">
+                      <div class="video-wrapper">
+                        <video id="video1" class="lazy-load-video" autoplay
+                          controls muted loop playsinline preload="none">
+                          <source
+                            data-src="./static/videos/ablations-touch-gs/full-method.mp4"
+                            type="video/mp4">
+                        </video>
+                      </div>
+                      <div class="video-wrapper">
+                        <video id="video2" class="lazy-load-video" autoplay
+                          controls muted loop playsinline preload="none">
+                          <source
+                            data-src="./static/videos/ablations-touch-gs/full-method-depth.mp4"
+                            type="video/mp4">
+                        </video>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="ablations-body">
+                    <div class="content is-centered gs-comp">
+                      <b> Full Method trained on Ground Truth Depth</b>
+                    </div>
+                    <div class="videos-container">
+                      <div class="video-wrapper">
+                        <video id="video1" class="lazy-load-video" autoplay
+                          controls muted loop playsinline preload="none">
+                          <source
+                            data-src="./static/videos/ablations-touch-gs/gt.mp4"
+                            type="video/mp4">
+                        </video>
+                      </div>
+                      <div class="video-wrapper">
+                        <video id="video2" class="lazy-load-video" autoplay
+                          controls muted loop playsinline preload="none">
+                          <source
+                            data-src="./static/videos/ablations-touch-gs/gt-depth.mp4"
+                            type="video/mp4">
+                        </video>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="columns is-centered">
+              <div class="column is-full-width teaser">
+                <h2 class="title is-3 ">Visualizations</h2>
+
+                <div class="content has-text-justified">
+                  <p>
+                    <b>(For larger screens, minimum 769 pixel width)</b> We
+                    include interactive visualizations of trained splats on our
+                    method to highlight the advantages of our method.
+                  </p>
+                  <div class="viz">
+
+                    <div>
+
+                      <div class="content is-centered gs-comp">
+                        <b>5</b> Input Views / Left: <b>Depth-GS</b> / Right: <b>Touch-GS</b>
+                      </div>
+
+                      <div class="iframe-container">
+                        <iframe
+                          src='https://my.spline.design/bunnyblenderdensedepth-ce426e3ba02055dd9aef6f09f2492d97/'
+                          frameborder='0' width='50%' height='400px'></iframe>
+                        <iframe
+                          src='https://my.spline.design/untitled-f428ed41b553fcdaf286de1a1399b1f1/'
+                          frameborder='0' width='48%' height='400px'></iframe>
+                      </div>
+
+                    </div>
+                    <br>
+
+                    <div>
+
+                      <div class="content is-centered gs-comp">
+                        <b>8</b> Input Views / Left: <b>Depth-GS</b> / Right: <b>Touch-GS</b>
+                      </div>
+
+                      <div class="iframe-container">
+                        <iframe
+                          src='https://my.spline.design/untitled-7b1ee2c9219a6b6c66e8ada72f67855f/'
+                          frameborder='0' width='48%' height='400px'></iframe>
+                        <iframe
+                          src='https://my.spline.design/bunnyrealtouchgs-19298035e2534b454937f0070c9114fd/'
+                          frameborder='0' width='48%' height='400px'></iframe>
+                      </div>
+                    </div>
+
+                    <div class="content is-centered gs-comp">
+                      <b>Navigate</b>: click and drag / <b>Zoom</b>: shift and
+                      scroll
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="section" id="BibTeX">
+        <div class="container is-max-desktop content">
+          <h2 class="title">BibTeX</h2>
+          <pre><code>@article{guptasarma2024a,
+  author    = {Shivani Guptasarma and Monroe Kennedy III},
+  title     = {ProACT: An Augmented Reality Testbed for Intelligent Prosthetic Arms},
+  journal   = {arXiv},
+  year      = {2024},
+}</code></pre>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="content has-text-centered">
+            <!-- <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a> -->
+            <a class="icon-link" href="https://github.com/armlabstanford"
+              class="external-link" disabled>
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+          <div class="columns is-centered">
+            <div class="column is-8">
+              <div class="content">
+                <p>
+                  We thank <a
+                    href="https://nerfies.github.io">Nerfies</a> for providing
+                  the template for this website.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        </footer
+
+      </body>
+    </html>
