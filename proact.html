@@ -105,27 +105,7 @@
       <section class="hero teaser">
         <div class="container is-max-desktop">
           <div class="hero-body">
-            <video id="splash-video" autoplay controls muted loop playsinline
-              preload="metadata" height="100%">
-              <source src="./static/videos/all-renders.mp4"
-                type="video/mp4">
-            </video>
-            <script>
-        if ('IntersectionObserver' in window) {
-          // Use Intersection Observer for lazy loading the video
-          let videoObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                const video = entry.target;
-                video.src = video.querySelector('source').src;
-                video.load();
-                videoObserver.unobserve(video);
-              }
-            });
-          }, {threshold: 0.10}); // Trigger when 75% of the video is visible
-      
-          videoObserver.observe(document.getElementById('splash-video'));
-        }
+
       </script>
             <h2 class="subtitle has-text-centered">
               <span class="dnerf">ProACT allows researchers to prototype intent estimation for prosthetic arm control.</span>
