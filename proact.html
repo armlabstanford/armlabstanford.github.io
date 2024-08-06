@@ -23,6 +23,29 @@
     gtag('config', 'G-PYVRSFMDRL');
     </script>
 
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var videos = document.querySelectorAll('.lazy-load-video');
+
+      var observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            var video = entry.target;
+            var source = video.querySelector('source');
+            source.src = source.dataset.src;
+            video.load(); // Load the video
+            video.classList.add('loaded'); // Optional: mark it as loaded
+            observer.unobserve(video); // Stop observing the loaded video
+          }
+        });
+      }, {threshold: 0.1}); // Trigger when at least 10% of the video is visible
+
+      videos.forEach(video => {
+        observer.observe(video);
+      });
+    });
+  </script>
+
     <link
       href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
       rel="stylesheet">
@@ -113,6 +136,15 @@
                       </a>
                     </span>
                     <span class="link-block">
+                      <a href="https://youtube.com/playlist?list=PL8ig4knmSt21gqOn0FdQ4Bcm53XfKXwFU&si=WyftQOe9pFsS95GO"
+                         class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                            <i class="fab fa-youtube"></i>
+                        </span>
+                        <span>Video</span>
+                      </a>
+                    </span>
+                    <span class="link-block">
                       <a href="https://github.com/armlabstanford/proact"
                          class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
@@ -185,7 +217,7 @@
             <!--/ Abstract. -->
 
             <!-- Paper video. -->
-            <!-- <div class="columns is-centered has-text-centered">
+    <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
@@ -193,15 +225,48 @@
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
-    </div> -->
+    </div>
             <!--/ Paper video. -->
           </div>
         </section>
 
-        <section class="section">
-          <div class="container is-max-desktop">
+      <section class="hero teaser">
+        <div class="container is-max-desktop">
+          <div class="hero-body">
+            <video id="splash-video" autoplay controls muted loop playsinline
+              preload="metadata" height="100%">
+              <source src="./static/proact/videos/all_methods_compressed.mp4"
+                type="video/mp4">
+            </video>
+            <script>
+        if ('IntersectionObserver' in window) {
+          // Use Intersection Observer for lazy loading the video
+          let videoObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const video = entry.target;
+                video.src = video.querySelector('source').src;
+                video.load();
+                videoObserver.unobserve(video);
+              }
+            });
+          }, {threshold: 0.10}); // Trigger when 75% of the video is visible
+      
+          videoObserver.observe(document.getElementById('splash-video'));
+        }
+      </script>
+            <h2 class="subtitle has-text-centered">
+              <span class="dnerf">We compared performance across four methods:
+                Method A: Sequential joint control (7 joints, moved one at a time with EMG)
+Method B: Sequential end-effector control (6 degrees-of-freedom, moved one at a time with EMG)
+Method C: Gaze-based assisted control (block selected with gaze, motion planned autonomously, executed with EMG)
+Method D: Context-aware assisted control (gaze selection biased by block color, based on task rules and the color of the previously placed block)
 
+A single pick-and-place action is shown with each method. All the clips are played at 2x speed. 
 
+Results showed little difference between the two assisted methods C and D, but significant improvement in success rates using C and D, compared to using A and B. </span>
+            </h2>
+          </div>
         </div>
       </section>
 
@@ -218,7 +283,11 @@
       url={https://arxiv.org/abs/2407.05025}, 
 }</code></pre>
         </div>
+
+      
       </section>
+
+    
 
       <footer class="footer">
         <div class="container">
