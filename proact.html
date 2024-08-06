@@ -216,20 +216,6 @@
 
             <!--/ Abstract. -->
 
-            <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src=""
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-            <!--/ Paper video. -->
-          </div>
-        </section>
-
       <section class="hero teaser">
         <div class="container is-max-desktop">
           <div class="hero-body">
@@ -256,15 +242,10 @@
         }
       </script>
             <h2 class="subtitle has-text-centered">
-              <span class="dnerf">We compared performance across four methods:
-                Method A: Sequential joint control (7 joints, moved one at a time with EMG)
-Method B: Sequential end-effector control (6 degrees-of-freedom, moved one at a time with EMG)
-Method C: Gaze-based assisted control (block selected with gaze, motion planned autonomously, executed with EMG)
-Method D: Context-aware assisted control (gaze selection biased by block color, based on task rules and the color of the previously placed block)
-
-A single pick-and-place action is shown with each method. All the clips are played at 2x speed. 
-
-Results showed little difference between the two assisted methods C and D, but significant improvement in success rates using C and D, compared to using A and B. </span>
+              <span class="dnerf">When only a few myoelectric control inputs are available, 
+                assisted control (C and D), with gaze-tracking and autonomous motion planning, is significantly easier
+                than direct control (A and B).
+                </span>
             </h2>
           </div>
         </div>
