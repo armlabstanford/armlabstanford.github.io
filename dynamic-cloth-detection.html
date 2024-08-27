@@ -223,26 +223,43 @@
             <div class="column is-four-fifths">
               <h2 class="title is-3 teaser">Abstract</h2>
               <div class="content has-text-justified teaser">
-                <p> Cloth manipulation is an important aspect of a
-                  number of everyday tasks and remains a significant challenge
-                  for robots. As a step toward effective robotic cloth manipula-
-                  tion, this paper presents a method for classifying the number of
-                  cloth layers grasped by a custom two-finger gripper equipped
-                  with DenseTact 2.0 optical tactile sensors. After grasping the
-                  cloth, the gripper performs a rubbing motion while collecting
-                  optical flow, wrench, and joint state data. Using this data, a
-                  transformer-based classifier network achieves a test accuracy
-                  of 96.43%. Evaluating different inputs and model architectures
-                  highlights the effectiveness of using tactile sensor information
-                  and a transformer model for this task. A comprehensive dataset
-                  of 368 labeled trials was collected and made open-source along
-                  with this paper.
+                <p> Cloth manipulation is an important aspect of many everyday tasks and remains a significant challenge for robots. While existing research has made strides in tasks like cloth smoothing and folding, many studies struggle from common failure modes (crumpled corners/edges, incorrect grasp configurations) that can be solved by cloth layer detection. 
+                  We present a novel method for classifying the number of grasped cloth layers using a custom gripper equipped with DenseTact 2.0 optical tactile sensors. After grasping a cloth, the gripper performs an anthropomorphic rubbing motion while collecting optical flow, 6-axis wrench, and joint state data. Using this data in a transformer-based network achieves a test accuracy of 98.21\% in correctly classifying the number of grasped layers, showing the effectiveness of our dynamic rubbing method. Evaluating different inputs and model architectures highlights the effectiveness of using tactile sensor information and a transformer model for this task. A comprehensive dataset of 368 labeled trials was collected and made open-source along with this paper.
                   </p>
                 </div>
               </div>
             </div>
 
             <!--/ Abstract. -->
+
+            <div class="columns is-centered">
+              <div class="column is-full-width">
+                <h2 class="title is-3 teaser">Method</h2>
+
+                <div class="content has-text-justified teaser">
+                  <p>
+                    Our method leverages state-of-the-art monocular depth
+                    estimation and Gaussian Process Implicit Surfaces from
+                    touches along an object and optimally fuses them to train a
+                    Gaussian
+                    Splatting model, or any other traditional NeRF. The
+                    monocular depth estimator gives us a coarse depth map, which
+                    we then align to real-world depths
+                    with depth data from a noisy depth camera and further with
+                    our touch data. We then combine this with our Gaussian
+                    Process Implicit Surface, which provides a more finer depth
+                    map.
+                    Finally, we can use a novel, uncertainty-weighted depth loss
+                    to train a NeRF on few view scenes, as well as mirrors and
+                    transparent objects, where vision alone fails.
+                  </p>
+                  <img src="./static/soft_cloth/images/gripper_cad_and_actual.png"
+                    alt="Method Image."
+                    style="width: 100%; height: auto; display: block; margin: auto;" />
+
+                </div>
+              </div>
+            </div>
 
       <section class="hero teaser">
         <div class="container is-max-desktop">
