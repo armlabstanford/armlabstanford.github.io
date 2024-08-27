@@ -111,28 +111,6 @@
                   </span>
                 </div>
 
-
-                <!-- <div class="is-size-5 publication-authors">
-                    <span class="author-block">
-                      <a href="https://aidenswann.com/">Aiden Swann*</a>,</span>
-                    <span class="author-block">
-                      <a href="https://peasant98.github.io/">Matthew Strong*,</span>
-                      <span class="author-block">
-                        <a href="https://wonkyungdo.github.io/website_wkdo/">Won
-                          Kyung Do</a>,
-                      </span>
-                      <span class="author-block">
-                        <a href="https://msl.stanford.edu/people/gadielsznaiercamps">Gadiel
-                          Sznaier Camps</a>,
-                      </span>
-                      <span class="author-block">
-                        <a href="https://web.stanford.edu/~schwager/">Mac Schwager</a>,
-                      </span>
-                      <span class="author-block">
-                        <a href="https://monroekennedy3.com/">Monroe Kennedy III</a>
-                      </span>
-                    </div> -->
-
                 <div class="is-size-5 publication-authors">
                   <span class="author-block">Stanford University</span>
                   <br>
@@ -182,15 +160,6 @@
                           <span>Data</span>
                         </a>
                       </span>
-                    <!-- span class="link-block">
-                      <a href="https://github.com/armlabstanford/proact"
-                         class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                            <i class="fab fa-github"></i>
-                        </span>
-                        <span>Code</span>
-                        </a>
-                    </span> -->
 
                   </div>
 
@@ -204,13 +173,13 @@
       <section class="hero teaser">
         <div class="container is-max-desktop">
           <div class="hero-body">
-            <img src="./static/soft_cloth/images/splash.png"
+            <img src="./static/soft_cloth/images/splash.jpg"
               alt="Method Image."
               style="width: 100%" />
 
       </script>
             <h2 class="subtitle has-text-centered">
-              <span class="dnerf">SUBTITLE HERE.</span>
+              <span class="dnerf">Our custom gripper and cloth layer detection method can be used in complex robotic tasks. Here, it is mounted on a LoCoBot. (a) shows the DenseTact RGB images, (b) shows the model inputs of optical flow, wrench, and joint states, and (c) shows the classification results.</span>
             </h2>
           </div>
         </div>
@@ -234,25 +203,14 @@
 
             <div class="columns is-centered">
               <div class="column is-full-width">
-                <h2 class="title is-3 teaser">Method</h2>
+                <h2 class="title is-3 teaser">Contributions</h2>
 
                 <div class="content has-text-justified teaser">
-                  <p>
-                    Our method leverages state-of-the-art monocular depth
-                    estimation and Gaussian Process Implicit Surfaces from
-                    touches along an object and optimally fuses them to train a
-                    Gaussian
-                    Splatting model, or any other traditional NeRF. The
-                    monocular depth estimator gives us a coarse depth map, which
-                    we then align to real-world depths
-                    with depth data from a noisy depth camera and further with
-                    our touch data. We then combine this with our Gaussian
-                    Process Implicit Surface, which provides a more finer depth
-                    map.
-                    Finally, we can use a novel, uncertainty-weighted depth loss
-                    to train a NeRF on few view scenes, as well as mirrors and
-                    transparent objects, where vision alone fails.
-                  </p>
+                  <ul>
+                      <li>A compact, 4 DOF gripper equipped with DenseTact 2.0 sensors, capable of performing a rubbing motion between its fingers.</li>
+                      <li>A dataset for cloth layer classification based on tactile sensor output. Included classes are 0, 1, 2, and 3 layers of cloth.</li>
+                      <li>A transformer-based network that successfully classifies the number of cloth layers using optical flow, wrench, and joint state data taken during the gripper’s rubbing motion.</li>
+                  </ul>
                   <img src="./static/soft_cloth/images/gripper_cad_and_actual.png"
                     alt="Method Image."
                     style="width: 100%; height: auto; display: block; margin: auto;" />
