@@ -7,7 +7,7 @@
     <meta name="keywords"
       content="Prosthetics, Shared control, Shared autonomy, Augmented Reality, Box and Blocks">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dynamic Cloth Layer Detection using DenseTact Optical Tactile Sensors</title>
+    <title>Dynamic Layer Detection of a Thin Silk Cloth using DenseTact Optical Tactile Sensors</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -95,7 +95,8 @@
           <div class="columns is-centered">
             <div class="column has-text-centered">
 
-              <h1 class="title is-1 publication-title">Dynamic Cloth Layer Detection using DenseTact Optical Tactile Sensors</h1>
+              <h1 class="title is-1 publication-title">Dynamic Layer Detection of a Thin Silk Cloth using DenseTact Optical
+                Tactile Sensors</h1>
               <div class="is-size-5 publication-authors">
                 <span class="author-block">
                   <a href="https://arm.stanford.edu/people/camille-chungyoun">Camille Chungyuon*</a>,
@@ -171,18 +172,16 @@
       </section>
 
       <section class="hero teaser">
-        <div class="container is-max-desktop">
+        <div class="container ">
           <div class="hero-body">
-            <img src="./static/soft_cloth/images/splash.jpg"
-              alt="Method Image."
-              style="width: 100%" />
+              <div class="has-text-centered">
+                <img src="./static/soft_cloth/images/splash.jpg" alt="Method Image." style="width: 65%" />
+              </div>
 
       </script>
-            <h2 class="subtitle has-text-centered">
-              <span class="dnerf">Our custom gripper and cloth layer detection method can be used in complex robotic tasks. Here, it is mounted on a LoCoBot. (a) shows the DenseTact RGB images, (b) shows the model inputs of optical flow, wrench, and joint states, and (c) shows the classification results.</span>
-            </h2>
-          </div>
-        </div>
+      <h2 class="subtitle has-text-centered" style="font-family: inherit; font-size: inherit; font-weight: normal; margin-left: 15%; margin-right: 15%;">
+        <span class="dnerf">Our custom gripper and cloth layer detection method can be used in complex robotic tasks. Here, it is mounted on a LoCoBot. (a) shows the DenseTact RGB images, (b) shows the model inputs of optical flow, wrench, and joint states, and (c) shows the classification results.</span>
+      </h2>
       </section>
 
       <section class="section">
@@ -193,7 +192,7 @@
               <h2 class="title is-3 teaser">Abstract</h2>
               <div class="content has-text-justified teaser">
                 <p> Cloth manipulation is an important aspect of many everyday tasks and remains a significant challenge for robots. While existing research has made strides in tasks like cloth smoothing and folding, many studies struggle from common failure modes (crumpled corners/edges, incorrect grasp configurations) that can be solved by cloth layer detection. 
-                  We present a novel method for classifying the number of grasped cloth layers using a custom gripper equipped with DenseTact 2.0 optical tactile sensors. After grasping a cloth, the gripper performs an anthropomorphic rubbing motion while collecting optical flow, 6-axis wrench, and joint state data. Using this data in a transformer-based network achieves a test accuracy of 98.21\% in correctly classifying the number of grasped layers, showing the effectiveness of our dynamic rubbing method. Evaluating different inputs and model architectures highlights the effectiveness of using tactile sensor information and a transformer model for this task. A comprehensive dataset of 368 labeled trials was collected and made open-source along with this paper.
+                  We present a novel method for classifying the number of grasped cloth layers using a custom gripper equipped with DenseTact 2.0 optical tactile sensors. After grasping a cloth, the gripper performs an anthropomorphic rubbing motion while collecting optical flow, 6-axis wrench, and joint state data. Using this data in a transformer-based network achieves a test accuracy of 98.21% in correctly classifying the number of grasped layers, showing the effectiveness of our dynamic rubbing method. Evaluating different inputs and model architectures highlights the effectiveness of using tactile sensor information and a transformer model for this task. A comprehensive dataset of 368 labeled trials was collected and made open-source along with this paper.
                   </p>
                 </div>
               </div>
@@ -211,6 +210,22 @@
                       <li>A dataset for cloth layer classification based on tactile sensor output. Included classes are 0, 1, 2, and 3 layers of cloth.</li>
                       <li>A transformer-based network that successfully classifies the number of cloth layers using optical flow, wrench, and joint state data taken during the gripper’s rubbing motion.</li>
                   </ul>
+
+                  <img src="./static/soft_cloth/images/gripper_orientation.png"
+                    alt="Method Image."
+                    style="width: 100%; height: auto; display: block; margin: auto;" />
+                </div>
+              </div>
+            </div>
+
+            <div class="columns is-centered">
+              <div class="column is-full-width">
+                <h2 class="title is-3 teaser">Hardware</h2>
+
+                <div class="content has-text-justified teaser">
+                  <p>
+                    The hardware setup for the gripper is shown below. The gripper is equipped with DenseTact 2.0 sensors as the fingertips and is capable of performing a rubbing motion between its fingers, measuring optical flows and net wrenches while recording its motor joint states. There are two DYNAMIXEL XL330-M288-T on each finger, chosen for their light weight and compact design, and controlled by an OpenRB-150 Arduino-compatible embedded controller. All gripper componenents communicate via ROS2 to perfrom dynamic cloth layer classification. 
+                  </p>
                   <img src="./static/soft_cloth/images/gripper_cad_and_actual.png"
                     alt="Method Image."
                     style="width: 100%; height: auto; display: block; margin: auto;" />
@@ -219,16 +234,37 @@
               </div>
             </div>
 
+            <div class="columns is-centered">
+              <div class="column is-full-width">
+                <h2 class="title is-3 teaser">Network Architecture</h2>
+
+                <div class="content has-text-justified teaser">
+                  <p>
+                    A transformer based neural network was used to classify each grasp and rubbing motion into one of the four labels (0, 1, 2, or 3 layers of grasped cloth). The model inputs are N-length time sequences of optical flow,
+                    6-axis wrench, and joint state data (N=200). Extracted features from each input are concatenated and fed into a transformer
+                    encoder [14], followed by fully-connected layers and a softmax function. The resulting output is the probability distribution
+                    across the 4 classes (0, 1, 2 and 3 layers of cloth). Ablations to optimize for the best model architecture were completed, and are described in depth in the paper.                  </p>
+                  <img src="./static/soft_cloth/images/model_arch.png"
+                    alt="Method Image."
+                    style="width: 100%; height: auto; display: block; margin: auto;" />
+
+                </div>
+              </div>
+            </div>
+            
+            <h2 class="title is-3 teaser">Experiments</h2>
+            <p>
+              A dataset of 368 labeled trials was collected and made publically available here: ATTACH URL. Raw RGB video streams are included, while optical flow, joint state, and net wrench data is available as npz files. The README details instructions on using the data.                 </p>
             <div class="ablations-body">
               <div class="content is-centered gs-comp">
-                <b> Rubbing Motion for All Labels (DONE 2)</b>
+                <b> Rubbing Motion for All Labels</b>
               </div>
               <div class="videos-container">
                 <div class="video-wrapper">
                   <video id="lazyVideo" class="lazy-load-video" autoplay
                     controls muted loop playsinline preload="none">
                     <source
-                      data-src="./static/soft_cloth/videos/0_layer_crp.mp4"
+                      data-src="./static/soft_cloth/videos/0_layer_crp_trim.mp4"
                       type="video/mp4">
                   </video>
                 </div>
@@ -236,7 +272,7 @@
                   <video id="video2" class="lazy-load-video" autoplay
                     controls muted loop playsinline preload="none">
                     <source
-                      data-src="./static/soft_cloth/videos/1_layer_crp.mp4"
+                      data-src="./static/soft_cloth/videos/1_layer_crp_trim.mp4"
                       type="video/mp4">
                   </video>
                 </div>
@@ -246,14 +282,14 @@
                 <div class="video-wrapper">
                   <video id="lazyVideo" class="lazy-load-video" autoplay
                     controls muted loop playsinline preload="none">
-                    <source data-src="./static/soft_cloth/videos/2_layer_crp.mp4"
+                    <source data-src="./static/soft_cloth/videos/2_layer_crp_trim.mp4"
                       type="video/mp4">
                   </video>
                 </div>
                 <div class="video-wrapper">
                   <video id="video2" class="lazy-load-video" autoplay
                     controls muted loop playsinline preload="none">
-                    <source data-src="./static/soft_cloth/videos/3_layer_crp.mp4"
+                    <source data-src="./static/soft_cloth/videos/3_layer_crp_trim.mp4"
                       type="video/mp4">
                   </video>
                 </div>
@@ -261,15 +297,19 @@
 
             <div class="ablations-body">
               <div class="content is-centered gs-comp">
-                <b> Confusion Matrices for Train and Test</b>
+                <b> Confusion Matrices</b>
               </div>
+
+              <p>
+                Based on the best architecture derived from the ablation study, confusion matrices across training epochs and test trials are presented. In testing, only one trial was misclassified of the 56 total, giving an accuracy of 98.21% on unseen data.             </p>
+              
 
             <div class="videos-container">
               <div class="video-wrapper">
                 <video id="lazyVideo" class="lazy-load-video" autoplay
                   controls muted loop playsinline preload="none">
                   <source
-                    data-src="./static/soft_cloth/videos/test_confusion_matrix_vid.mp4"
+                    data-src="./static/soft_cloth/videos/train_confusion_matrix_vid.mp4"
                     type="video/mp4">
                 </video>
               </div>
@@ -277,52 +317,13 @@
                 <video id="video2" class="lazy-load-video" autoplay
                   controls muted loop playsinline preload="none">
                   <source
-                    data-src="./static/soft_cloth/videos/train_confusion_matrix_vid.mp4"
+                    data-src="./static/soft_cloth/videos/test_confusion_matrix_vid.mp4"
                     type="video/mp4">
                 </video>
               </div>
             </div>
       
             
-      <section class="hero teaser">
-        <div class="container is-max-desktop">
-          <div class="columns is-centered has-text-centered">
-            <div class="column is-four-fifths">
-              <h2 class="title is-3 teaser"> Experiments </h2>
-        </div>
-        </div>
-          <div class="hero-body">
-            <video id="splash-video" autoplay controls muted loop playsinline
-              preload="metadata" height="100%">
-              <source src="./static/proact/videos/all_methods_compressed.mp4"
-                type="video/mp4">
-            </video>
-            <script>
-        if ('IntersectionObserver' in window) {
-          // Use Intersection Observer for lazy loading the video
-          let videoObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                const video = entry.target;
-                video.src = video.querySelector('source').src;
-                video.load();
-                videoObserver.unobserve(video);
-              }
-            });
-          }, {threshold: 0.10}); // Trigger when 75% of the video is visible
-      
-          videoObserver.observe(document.getElementById('splash-video'));
-        }
-      </script>
-            <h2 class="subtitle has-text-centered">
-              <span class="dnerf">When only low-dimensional myoelectric control input is available, 
-                assisted control (C and D), with gaze-tracking and autonomous motion planning, is significantly easier
-                than direct control (A and B).
-                </span>
-            </h2>
-          </div>
-        </div>
-      </section>
 
       <section class="section" id="BibTeX">
         <div class="container is-max-desktop content">
