@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="description"
-      content="Touch-GS combines the power of vision and touch to generate high-quality few-shot and challenging scenes, such as few-view object centric scenes, mirrors,
-        and transparent objects.">
-    <meta name="keywords"
-      content="Gaussian Splatting, Monocular Depth, Gaussian Process Implicit Surface, NeRF, Tactile-GS, Touch-GS, Tactile, Touch, Dexterous Manipulation">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Next Best Sense: Guiding Vision and Touch with FisherRF for 3D Gaussian Splatting</title>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
-    <script>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Touch-GS combines the power of vision and touch to generate high-quality few-shot and challenging scenes, such as few-view object centric scenes, mirrors,
+        and transparent objects.">
+  <meta name="keywords"
+    content="Gaussian Splatting, Monocular Depth, Gaussian Process Implicit Surface, NeRF, Tactile-GS, Touch-GS, Tactile, Touch, Dexterous Manipulation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Next Best Sense: Guiding Vision and Touch with FisherRF for 3D Gaussian Splatting</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
     window.dataLayer = window.dataLayer || [];
 
     function gtag() {
@@ -24,8 +24,8 @@
     gtag('config', 'G-PYVRSFMDRL');
   </script>
 
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
       var videos = document.querySelectorAll('.lazy-load-video');
 
       var observer = new IntersectionObserver((entries) => {
@@ -39,7 +39,9 @@
             observer.unobserve(video); // Stop observing the loaded video
           }
         });
-      }, {threshold: 0.1}); // Trigger when at least 10% of the video is visible
+      }, {
+        threshold: 0.1
+      }); // Trigger when at least 10% of the video is visible
 
       videos.forEach(video => {
         observer.observe(video);
@@ -47,110 +49,106 @@
     });
   </script>
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-      rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
-    <link rel="stylesheet" href="./static/css/bulma.min.css">
-    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-    <link rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-    <link rel="stylesheet" href="./static/css/index.css">
-    <link rel="icon" href="./static/images/favicon.ico">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.ico">
 
-    <script
-      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script defer src="./static/js/fontawesome.all.min.js"></script>
-    <script src="./static/js/bulma-carousel.min.js"></script>
-    <script src="./static/js/bulma-slider.min.js"></script>
-    <script src="./static/js/index.js"></script>
-  </head>
-  <body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
 
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <a role="button" class="navbar-burger" aria-label="menu"
-          aria-expanded="false">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://arm.stanford.edu/">
+          <span class="icon">
+            <i class="fas fa-home"></i>
+          </span>
         </a>
       </div>
-      <div class="navbar-menu">
-        <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-          <a class="navbar-item" href="https://arm.stanford.edu/">
-            <span class="icon">
-              <i class="fas fa-home"></i>
-            </span>
-          </a>
-        </div>
 
-      </div>
-    </nav>
+    </div>
+  </nav>
 
-    <section class="hero">
-      <div class="hero-body">
-        <div class="container is-max-desktop">
-          <div class="columns is-centered">
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+
+            <h1 class="title is-1 publication-title"><span style="color: green;">Next</span> <span style="color: blue;">Best</span> <span style="color: purple;">Sense</span>: Guiding Vision and Touch with FisherRF for 3D
+              Gaussian Splatting</h1>
+            <div class="is-size-5 publication-authors">
+
+              <span class="author-block">
+                <a href="https://peasant98.github.io/">Matthew Strong*,</span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=Jv88S-IAAAAJ&hl=en">Boshu Lei*</a>,
+              </span>
+              <span class="author-block">
+                <a href="https://aidenswann.com/">Aiden Swann</a>,</span>
+              <span class="author-block">
+                <a href="https://jiangwenpl.github.io/">Wen Jiang</a>,
+              </span>
+              <span class="author-block">
+                <a href="https://www.cis.upenn.edu/~kostas/">Kostas Daniilidis</a>,
+              </span>
+              <span class="author-block">
+                <a href="https://monroekennedy3.com/">Monroe Kennedy III</a>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Stanford University, University of Pennsylvania</span>
+              <br>
+              <br>
+              <a href="https://arm.stanford.edu/" style="display: inline-block; width: 30%; margin-right: 20px;">
+                <img src="./static/images/armlab-logo.png" alt="Armlab Logo" style="width: 100%;">
+              </a>
+              <a href="https://www.grasp.upenn.edu/" style="display: inline-block; width: 20%;">
+                <img src="./static/nextbestsense/grasp.svg" alt="GRASP Logo" style="width: 100%;">
+              </a>
+              <br>
+            </div>
+
             <div class="column has-text-centered">
-              
-              <h1 class="title is-1 publication-title">Next Best Sense: Guiding Vision and Touch with FisherRF for 3D Gaussian Splatting</h1>
-              <div class="is-size-5 publication-authors">
-    
-                <span class="author-block">
-                  <a href="https://peasant98.github.io/">Matthew Strong*,</span>
-                  <span class="author-block">
-                    <a href="https://scholar.google.com/citations?user=Jv88S-IAAAAJ&hl=en">Boshu Lei*</a>,
-                  </span>
-                  <span class="author-block">
-                    <a href="https://aidenswann.com/">Aiden Swann</a>,</span>
-                  <span class="author-block">
-                    <a href="https://jiangwenpl.github.io/">Wen Jiang</a>,
-                  </span>
-                  <span class="author-block">
-                    <a href="https://www.cis.upenn.edu/~kostas/">Kostas Daniilidis</a>,
-                  </span>
-                  <span class="author-block">
-                    <a href="https://monroekennedy3.com/">Monroe Kennedy III</a>
-                  </span>
-                </div>
-
-                <div class="is-size-5 publication-authors">
-                  <span class="author-block">Stanford University, University of Pennsylvania</span>
-                  <br>
-                  <br>
-                  <a href="https://arm.stanford.edu/" style="display: inline-block; width: 30%; margin-right: 20px;">
-                    <img src="./static/images/armlab-logo.png" alt="Armlab Logo" style="width: 100%;">
-                  </a>
-                  <a href="https://www.grasp.upenn.edu/" style="display: inline-block; width: 20%;">
-                    <img src="./static/nextbestsense/grasp.svg" alt="GRASP Logo" style="width: 100%;">
-                  </a>
-                  <br>
-                </div>
-
-                <div class="column has-text-centered">
-                  <div class="publication-links">
-                    <span class="link-block">
-                      <a href="https://arxiv.org/pdf/2403.09875.pdf"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
+              <div class="publication-links">
+                <!-- <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2403.09875.pdf"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
                     </span>
-                    <span class="link-block">
-                      <a href="https://arxiv.org/abs/2403.09875"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="ai ai-arxiv"></i>
-                        </span>
-                        <span>arXiv</span>
-                      </a>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2403.09875" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
                     </span>
-                    <!-- <span class="link-block">
+                    <span>arXiv</span>
+                  </a>
+                </span> -->
+                <!-- <span class="link-block">
                       <a href="https://www.youtube.com/watch?v=FqejaTEt7aU"
                          class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
@@ -159,7 +157,7 @@
                         <span>Video</span>
                       </a>
                     </span> -->
-                    <!-- <span class="link-block">
+                <!-- <span class="link-block">
                       <a href="https://github.com/armlabstanford/Touch-GS"
                          class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
@@ -168,7 +166,7 @@
                         <span>Code</span>
                         </a>
                     </span> -->
-                    <!-- <span class="link-block">
+                <!-- <span class="link-block">
                 <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -177,7 +175,7 @@
                   <span>Video</span>
                 </a>
               </span> -->
-                    <!-- <span class="link-block">
+                <!-- <span class="link-block">
                 <a href="https://github.com/armlabstanford/Touch-GS"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -186,58 +184,52 @@
                   <span>Code</span>
                   </a>
               </span> -->
-                  </div>
-
-                </div>
               </div>
+
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </section>
 
-      <section class="section">
-        <div class="container is-max-desktop">
-          <!-- Abstract. -->
-          <div class="columns is-centered has-text-centered">
-            <div class="column is-four-fifths">
-              <h2 class="title is-3 teaser">Abstract</h2>
-              <div class="content has-text-justified teaser">
-                <p>
-                    In this work, we propose a framework for active
-                    next best view and touch selection for robotic manipulators
-                    using 3D Gaussian Splatting (3DGS). 3DGS is emerging as
-                    a useful explicit 3D scene representation for robotics, as it
-                    has the ability to represent scenes in a both photorealistic
-                    and geometrically accurate manner. However, in real-world
-                    online robotic scenes where the number of views is limited
-                    given efficiency requirement, random view selection for 3DGS
-                    is untenable as it becomes unclear as to where to view and
-                    touch an object in an autonomous manner. We address this
-                    issue by proposing an end-to-end online training and active view
-                    selection pipeline which enhances the performance of 3DGS in
-                    few view robotics settings. We first elevate the performance of
-                    few-shot 3DGS with a novel semantic depth alignment method
-                    via SAM2 that we supplement with Pearson depth and normal
-                    loss to improve color and depth reconstruction of real-world
-                    scenes. We then extend FisherRF, a next-best-view selection
-                    method for 3DGS, as a method of selecting views and touch
-                    based on depth uncertainty. With a more robust few view
-                    Gaussian Splat, we can perform view selection in an online
-                    manner on a real robot, and further construct a 3D mask to
-                    perform depth uncertainty for next best touch. We motivate
-                    our improvements to few-shot GS scenes, and extend depth-
-                    based FisherRF to these scenes, where we demonstrate both
-                    qualitative and quantitative improvements on challenging robot
-                    scenes
-                </p>
-                </div>
-              </div>
-            </div>
-            
-            <!--/ Abstract. -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 teaser">Abstract</h2>
+          <div class="content has-text-justified teaser">
+            <p>
+              We propose a framework for active next best view and touch selection for robotic manipulators using 3D
+              Gaussian Splatting (3DGS).
+              3DGS is emerging as a useful explicit 3D scene representation for robotics, as it has the ability to
+              represent scenes in a both
+              photorealistic and geometrically accurate manner. However, in real-world online robotic scenes where the
+              number of views is limited given
+              efficiency requirements, random view selection for 3DGS becomes impractical as views are often overlapping
+              and redundant. We address this
+              issue by proposing an end-to-end online training and active view selection pipeline, which enhances the
+              performance of 3DGS in few-view
+              robotics settings. We first elevate the performance of few-shot 3DGS with a novel <i>semantic depth
+                alignment</i> method using Segment
+              Anything Model 2 (SAM2) that we supplement with Pearson depth and normal loss to improve color and depth
+              reconstruction of real-world scenes.
+              We then extend FisherRF, a next-best-view selection method for 3DGS, to select views and touch poses based
+              on depth uncertainty. We perform
+              online view selection a real robot system during live 3DGS training. We motivate our improvements to
+              few-shot GS scenes,
+              and extend depth-based FisherRF to these scenes, where we demonstrate both qualitative and quantitative
+              improvements on challenging robot scenes.
+            </p>
+          </div>
+        </div>
+      </div>
 
-            <!-- Paper video. -->
-            <!-- <div class="columns is-centered has-text-centered">
+      <!--/ Abstract. -->
+
+      <!-- Paper video. -->
+      <!-- <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
@@ -246,122 +238,136 @@
         </div>
       </div>
     </div> -->
-            <!--/ Paper video. -->
+      <!--/ Paper video. -->
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+
+          <div class="content has-text-justified teaser">
+            <img src="./static/nextbestsense/splash_next_best.png" alt="Method Image."
+              style="width: 50%; display: block; margin: auto;" />
           </div>
-        </section>
+        </div>
+      </div>
 
-        <section class="section">
-          <div class="container is-max-desktop">
-            
-            <div class="columns is-centered">
-              <div class="column is-full-width">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3 teaser">Method</h2>
 
-                <div class="content has-text-justified teaser">
-                  <img src="./static/nextbestsense/splash_next_best.png"
-                alt="Method Image."
-                style="width: 50%; display: block; margin: auto;" />
-                </div>
+          <div class="content has-text-justified teaser">
+            <p>
+              Our method leverages state-of-the-art monocular depth
+              estimation and semantic visual foundational models to train few-shot, challenging Gaussian Splatting
+              scenes. We focus on
+              geometrically precise reconstructions with a novel semantic depth alignment method and relative depth
+              loss. We then utilize a recent work in next best view selection
+              called <b>FisherRF</b>, and extend it to encode <i>depth uncertainty</i> for both vision and touch. We
+              then perform online view selection on a real robot system during live 3DGS training,
+              and demonstrate the effectiveness of uncertainty-guided touch on a tricky mirror scene.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-full-width teaser">
+          <h2 class="title is-3 ">SAM2 Depth Alignment</h2>
+
+          <div class="content has-text-justified">
+            <p>
+              Initialization is known to be highly sensitive in Gaussian Splatting, requiring metrically accurate
+              Gaussians to seed a scene. We propose a novel
+              semantic depth alignment using Segment Anything 2 to align monocular depths. Concretely, we feed a color
+              image into a monocular depth estimator such as DepthAnythingV2. We then run the SAM2 automatic mask
+              generator on the RGB image, which captures objects and backgrounds in the scene.
+              This method does not require any depth completion networks that require extensive fine-tuning, and is a
+              computationally cheap step. With a depth from a depth image, often prone to noise and incorrect in challenging lighting conditions,
+              we perform a mask-aware alignment on the monocular depth to output a SAM2 aligned depth; retaining the
+              best of both worlds: <b>metrically accurate and geometrically precise</b>.
+            </p>
+
+            <div id="banner">
+              <div class="inline-block-sam2-init">
+                <img src="./static/nextbestsense/semantic_alignment.png">
               </div>
             </div>
 
-            <!-- <div class="columns is-centered">
-              <div class="column is-full-width">
-                <h2 class="title is-3 teaser">Method</h2>
+            <p>
+              The alignment is used as initialization for the scene. SAM2 aligned depths (<i>right</i>) improves significantly upon a least squares alignment (<i>left</i>) monocular depth.
 
-                <div class="content has-text-justified teaser">
-                  <p>
-                    Our method leverages state-of-the-art monocular depth
-                    estimation and Gaussian Process Implicit Surfaces from
-                    touches along an object and optimally fuses them to train a
-                    Gaussian
-                    Splatting model, or any other traditional NeRF. The
-                    monocular depth estimator gives us a coarse depth map, which
-                    we then align to real-world depths
-                    with depth data from a noisy depth camera and further with
-                    our touch data. We then combine this with our Gaussian
-                    Process Implicit Surface, which provides a more finer depth
-                    map.
-                    Finally, we can use a novel, uncertainty-weighted depth loss
-                    to train a NeRF on few view scenes, as well as mirrors and
-                    transparent objects, where vision alone fails.
-                  </p>
-                  <img src="./static/images/method.png"
-                    alt="Method Image."
-                    style="width: 100%; height: auto; display: block; margin: auto;" />
+            </p>
 
-                </div>
+            <div id="banner">
+              <div class="inline-block-sam2-init">
+                <img style="width: 60%; display: block; margin: auto;"  src="./static/nextbestsense/sam2-mesh.png">
               </div>
-            </div> -->
-
-            <!-- <div class="columns is-centered">
-              <div class="column is-full-width teaser">
-                <h2 class="title is-3 ">Method at a Glance</h2>
-
-                <div class="content has-text-justified">
-                  <p>
-                    Combined, our method can be shown as a). a RGB image which
-                    b). we compute a depth map from ZOEDepth
-                    and c). a vision uncertainty map. In the touch pipeline, we
-                    use the DenseTact sensor to get a set of
-                    e). touches across an object. We use the GPIS representation
-                    to compute f). depth and g) uncertainty.
-                    We finally construct the optimally fused d). depth and h).
-                    uncertainty.
-                  </p>
-
-                  <div id="banner">
-                    <div class="inline-block-gpis-init">
-                      <img src="./static/images/method_stages.png">
-                    </div>
-
-                  </div>
-
-                </div>
-              </div>
-            </div> -->
+            </div>
 
           </div>
-
         </div>
-      </section>
+      </div>
 
-      <section class="section" id="BibTeX">
-        <div class="container is-max-desktop content">
-          <h2 class="title">BibTeX</h2>
-          <pre><code>@article{strong2024nextbestsense,
+      <div class="columns is-centered">
+        <div class="column is-full-width teaser">
+          <h2 class="title is-3 ">Geometric Guidance</h2>
+
+          <div class="content has-text-justified">
+            <p>
+              We utilize Pearson depth loss and normal supervision to guide the Splat into a realistic scene. 
+            </p>
+
+            <div id="banner">
+              <div class="inline-block-sam2-init">
+                <img src="./static/nextbestsense/pearson.png">
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    </div>
+  </section>
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{strong2024nextbestsense,
   author    = {Matthew Strong and Boshu Lei and Aiden Swann and Wen Jiang and Kostas Daniilidis and Monroe Kennedy III},
   title     = {Next Best Sense: Guiding Vision and Touch with FisherRF for 3D Gaussian Splatting},
   journal   = {arXiv},
   year      = {2024},
 }</code></pre>
-        </div>
-      </section>
+    </div>
+  </section>
 
-      <footer class="footer">
-        <div class="container">
-          <div class="content has-text-centered">
-            <!-- <a class="icon-link"
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <!-- <a class="icon-link"
          href="./static/videos/nerfies_paper.pdf">
         <i class="fas fa-file-pdf"></i>
       </a> -->
-            <a class="icon-link" href="https://github.com/armlabstanford"
-              class="external-link" disabled>
-              <i class="fab fa-github"></i>
-            </a>
-          </div>
-          <div class="columns is-centered">
-            <div class="column is-8">
-              <div class="content">
-                <p>
-                  We graciously thank <a
-                    href="https://nerfies.github.io">Nerfies</a> for providing
-                  the template for this website.
-                </p>
-              </div>
-            </div>
+        <a class="icon-link" href="https://github.com/armlabstanford" class="external-link" disabled>
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              We graciously thank <a href="https://nerfies.github.io">Nerfies</a> for providing
+              the template for this website.
+            </p>
           </div>
         </div>
-        </footer
-
-      </body>
-    </html>
+      </div>
+    </div>
+  </footer </body> </html>
