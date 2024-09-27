@@ -1,7 +1,7 @@
 ---
-title: About and Join
+title: About
 layout: default
-filename: about_and_join
+filename: about
 ---
 
 # About and Join
