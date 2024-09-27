@@ -94,9 +94,11 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
 
-            <h1 class="title is-1 publication-title"><span style="color: green;">Next</span> <span style="color: blue;">Best</span> <span style="color: purple;">Sense</span>: Guiding Vision and Touch with FisherRF for 3D
+            <h1 class="title is-1 publication-title"><span style="color: green;">Next</span> <span
+                style="color: blue;">Best</span> <span style="color: purple;">Sense</span>: Guiding Vision and Touch
+              with FisherRF for 3D
               Gaussian Splatting</h1>
-              <b>Stay tuned in ~1 week for the full videos, paper, and code release!</b>
+            <b>Stay tuned in ~1 week for the full videos, paper, and code release!</b>
             <div class="is-size-5 publication-authors">
 
               <span class="author-block">
@@ -287,7 +289,8 @@
               image into a monocular depth estimator such as DepthAnythingV2. We then run the SAM2 automatic mask
               generator on the RGB image, which captures objects and backgrounds in the scene.
               This method does not require any depth completion networks that require extensive fine-tuning, and is a
-              computationally cheap step. With a depth from a depth image, often prone to noise and incorrect in challenging lighting conditions,
+              computationally cheap step. With a depth from a depth image, often prone to noise and incorrect in
+              challenging lighting conditions,
               we perform a mask-aware alignment on the monocular depth to output a SAM2 aligned depth; retaining the
               best of both worlds: <b>metrically accurate and geometrically precise</b>.
             </p>
@@ -299,13 +302,14 @@
             </div>
 
             <p>
-              The alignment is used as initialization for the scene. SAM2 aligned depths (<i>right</i>) improves significantly upon a least squares alignment (<i>left</i>) monocular depth.
+              The alignment is used as initialization for the scene. SAM2 aligned depths (<i>right</i>) improves
+              significantly upon a least squares alignment (<i>left</i>) monocular depth.
 
             </p>
 
             <div id="banner">
               <div class="inline-block-sam2-init">
-                <img style="width: 60%; display: block; margin: auto;"  src="./static/nextbestsense/sam2-mesh.png">
+                <img style="width: 60%; display: block; margin: auto;" src="./static/nextbestsense/sam2-mesh.png">
               </div>
             </div>
 
@@ -319,12 +323,83 @@
 
           <div class="content has-text-justified">
             <p>
-              We utilize Pearson depth loss and normal supervision to guide the Splat into a realistic scene. 
+              We utilize Pearson depth loss and normal supervision to guide the Splat into a realistic scene.
             </p>
 
             <div id="banner">
               <div class="inline-block-sam2-init">
                 <img src="./static/nextbestsense/pearson.png">
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-full-width teaser">
+          <h2 class="title is-3">Few-Shot Gaussian Splatting Results</h2>
+          <p>
+            We show our method for few-shot GS in a variety of scenarios
+            The below consists of a <b>RGB</b> and <b>depth</b>
+            comparison between lifted least-squares-aligned depths and semantically aligned depths.
+            Our method is on the right side of the slider.
+          </p>
+
+          <div class="content is-centered gs-comp">
+            <b> Bunny Blender Scene (6 input views)</b>
+          </div>
+
+          <div class="content has-text-justified iframe-container">
+            <iframe frameborder="0" class="juxtapose-t" width="48%"
+              src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=4d254ca8-7c5d-11ef-9397-d93975fe8866"></iframe>
+            <iframe frameborder="0" class="juxtapose-t" width="48%"
+              src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=d9f6a068-7c5e-11ef-9397-d93975fe8866"></iframe>
+          </div>
+
+          <div class="content is-centered gs-comp">
+            <b> Bunny Real Scene (8 input views)</b>
+          </div>
+
+          <div class="content has-text-justified iframe-container">
+            <iframe frameborder="0" class="juxtapose" width="48%"
+              src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=73db6ee0-7c62-11ef-9397-d93975fe8866"></iframe>
+            <iframe frameborder="0" class="juxtapose" width="48%"
+              src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=4e22ff92-7c62-11ef-9397-d93975fe8866"></iframe>
+          </div>
+
+          <p>
+            Even on a challenging prism object, our SAM2-based method is able to capture the scene densely compared to
+            prior works that use only geometric depth guidance.
+
+          </p>
+
+          <div class="content is-centered gs-comp">
+            <b> Prism Real Scene (single training view)</b>
+          </div>
+
+          <div class="content has-text-justified iframe-container" , style="align-items: flex-start;">
+            <img src="./static/nextbestsense/prism.png" alt="Method Image." style="width: 48%;" />
+            <iframe frameborder="0" class="juxtapose" width="48%"
+              src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=5101307a-7c68-11ef-9397-d93975fe8866"></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3 teaser">Next Best View for Robotics</h2>
+
+          <div class="content has-text-justified teaser">
+            <p>
+              We turn to FisherRF, a state-of-the-art next best view selection method for 3DGS, and extend it to encode depth uncertainty for vision and touch. 
+              This proves to be more impactful than measuring uncertainty from color alone, as depth is a more reliable measure of scene geometry. Then, in an online manner, we can 
+              select views based on depth uncertainty to progressively refine a scene.
+            </p>
+
+            <div id="banner">
+              <div class="inline-block-sam2-init">
+                <img src="./static/nextbestsense/nbv.png" style="width: 200%;">
               </div>
             </div>
 
