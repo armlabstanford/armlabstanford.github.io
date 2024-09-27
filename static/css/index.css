@@ -166,6 +166,36 @@ video {
     height: 500px;
   }
 }
+.image-item {
+  display: flex;
+  flex-direction: column; /* Stack the label above the image */
+  align-items: center; /* Ensure label and image are aligned to center */
+  text-align: center; /* Center-align the text */
+  width: 40%; /* Adjust width for each image item */
+}
+
+.image-item img {
+  width: 100%; /* Ensure images take up the full width of their containers */
+  padding: 5px; /* Add padding inside the image for some space */
+  box-sizing: border-box;
+}
+
+.image-item label {
+  font-size: 14px;
+  margin-bottom: 5px; /* Add small space below the label */
+  font-weight: bold;
+}
+
+.image-container {
+  display: flex;              /* Use flexbox to align images side by side */
+  justify-content: center;     /* Optional: centers the images horizontally within the div */
+  align-items: flex-start;     /* Align the images to the top (optional) */
+}
+
+.image-container img {
+  width: 100%;                  /* Set each image to take up 50% of the container width */
+  margin-right: 5px;           /* Optional: adds space between the images */
+}
 
 .iframe-container {
   display: flex;
