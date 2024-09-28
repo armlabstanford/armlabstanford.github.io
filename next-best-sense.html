@@ -49,6 +49,8 @@
     });
   </script>
 
+
+
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
@@ -427,13 +429,13 @@
                 <label for="random-view">Random View</label>
                 <img src="./static/nextbestsense/random_view.png" alt="Random View">
               </div>
-          
+
               <!-- Fisher RGB Image with Label -->
               <div class="image-item">
                 <label for="fisher-rgb">FisherRF (RGB. Baseline)</label>
                 <img src="./static/nextbestsense/fisher-rgb.png" alt="Fisher RGB">
               </div>
-          
+
               <!-- Fisher Depth Image with Label -->
               <div class="image-item">
                 <label for="fisher-depth">FisherRF (Depth)</label>
@@ -472,15 +474,120 @@
         <div class="column is-full-width">
           <h2 class="title is-3 teaser">Online FisherRF</h2>
 
+
+
           <div class="content has-text-justified teaser">
             <p>
               We demonstrate our method operating in end to end fashion on a real robot system.
             </p>
+            <h3 class="title is-3 teaser">Interactive Visualization</h3>
+            <p>
+              Use the <b>slider</b> to compare the random view selection with FisherRF depth selection. FisherRF
+              improves the background and removes erroneous floaters.
+            </p>
 
+            <div class="comp-container">
+              <div class="comp-item">
+                <label for="random-view-selection" style="font-size: 20px;"><b>Bunny RGB</b></label>
+
+
+                <div class="comparison-container" id="comparison-container">
+                  <div class="video-wrapper-comp underlay" id="underlay">
+                    <video autoplay muted loop>
+                      <source src="./static/videos/ablations-nextbestsense/fisher-bunny-rgb.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+
+                  <div class="video-wrapper-comp underlay" id="overlay">
+                    <video autoplay muted loop>
+                      <source src="./static/videos/ablations-nextbestsense/random-bunny-rgb.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+
+                  <div class="slider" id="slider"></div>
+                </div>
+              </div>
+
+              <div class="comp-item">
+                <label for="fisher-view-selection" style="font-size: 20px;"><b>Bunny Depth</b></label>
+
+
+                <div class="comparison-container" id="comparison-container-1">
+                  <div class="video-wrapper-comp underlay" id="underlay-1">
+                    <video autoplay muted loop>
+                      <source src="./static/videos/ablations-nextbestsense/fisher-bunny-depth.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+
+                  <div class="video-wrapper-comp underlay" id="overlay-1">
+                    <video autoplay muted loop>
+                      <source src="./static/videos/ablations-nextbestsense/random-bunny-depth.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+
+                  <div class="slider" id="slider-1"></div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- add some padding -->
+             <br> <br>
+
+            <div class="comp-container">
+              <div class="comp-item">
+                <label for="random-view-selection" style="font-size: 20px;"><b>Table Scene RGB</b></label>
+
+                <div class="comparison-container" id="comparison-container-2">
+                  <div class="video-wrapper-comp underlay" id="underlay-2">
+                    <video autoplay muted loop>
+                      <source src="./static/videos/ablations-nextbestsense/fisher-object-rgb.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+
+                  <div class="video-wrapper-comp underlay" id="overlay-2">
+                    <video autoplay muted loop>
+                      <source src="./static/videos/ablations-nextbestsense/random-object-rgb.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+
+                  <div class="slider" id="slider-2"></div>
+                </div>
+              </div>
+
+              <div class="comp-item">
+                <label for="fisher-view-selection" style="font-size: 20px;"><b>Table Scene Depth</b></label>
+
+
+                <div class="comparison-container" id="comparison-container-3">
+                  <div class="video-wrapper-comp underlay" id="underlay-3">
+                    <video autoplay muted loop>
+                      <source src="./static/videos/ablations-nextbestsense/fisher-object-depth.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+
+                  <div class="video-wrapper-comp underlay" id="overlay-3">
+                    <video autoplay muted loop>
+                      <source src="./static/videos/ablations-nextbestsense/random-object-depth.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+
+                  <div class="slider" id="slider-3"></div>
+                </div>
+              </div>
+
+            </div>
           </div>
         </div>
       </div>
-
 
       <div class="columns is-centered">
         <div class="column is-full-width">
@@ -534,4 +641,50 @@
         </div>
       </div>
     </div>
-  </footer </body> </html>
+  </footer>
+  <script>
+    function setupSlider(sliderId, overlayId, containerId) {
+      const slider = document.getElementById(sliderId);
+      const overlay = document.getElementById(overlayId);
+      const container = document.getElementById(containerId);
+
+      let isDragging = false;
+      const rect = container.getBoundingClientRect();
+      let offsetX = rect.width / 2;
+      overlay.style.clipPath = `polygon(0 0, ${offsetX}px 0, ${offsetX}px 100%, 0 100%)`;
+
+      slider.addEventListener('mousedown', function () {
+        isDragging = true;
+      });
+
+      window.addEventListener('mouseup', function () {
+        isDragging = false;
+      });
+
+      window.addEventListener('mousemove', function (e) {
+        if (!isDragging) return;
+
+        // Get the position relative to the container
+        const rect = container.getBoundingClientRect();
+        let offsetX = e.clientX - rect.left;
+
+        // Ensure the slider stays within the bounds
+        offsetX = Math.max(0, Math.min(offsetX, rect.width - 5));
+
+        // Move the slider
+        slider.style.left = offsetX + 'px';
+
+        // Adjust the clip-path of the overlay video based on the slider position
+        overlay.style.clipPath = `polygon(0 0, ${offsetX}px 0, ${offsetX}px 100%, 0 100%)`;
+      });
+    }
+
+    // Set up sliders
+    setupSlider('slider', 'overlay', 'comparison-container');
+    setupSlider('slider-1', 'overlay-1', 'comparison-container-1');
+    setupSlider('slider-2', 'overlay-2', 'comparison-container-2');
+    setupSlider('slider-3', 'overlay-3', 'comparison-container-3');
+  </script>
+</body>
+
+</html>

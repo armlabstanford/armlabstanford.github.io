@@ -146,6 +146,66 @@ body {
   margin: 5px; /* This provides space between the videos */
 }
 
+.comparison-container {
+  position: relative;
+  width: 100%;
+  max-width: 100vw; /* Prevents overflow by limiting max-width */
+  height: 450px;
+  overflow: hidden; /* Ensure the container doesn't overflow */
+  margin: 0 auto; /* Center the container */
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 50%;  /* Start the slider in the middle */
+  width: 5px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: 2;
+  cursor: ew-resize;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.overlay video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.underlay video {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-wrapper-comp {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-wrapper-comp video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 video {
   width: 100%; /* This will make the video fill its container */
   height: auto; /* This will maintain the aspect ratio of the video */
@@ -174,6 +234,14 @@ video {
   width: 40%; /* Adjust width for each image item */
 }
 
+.comp-item {
+  display: flex;
+  flex-direction: column; /* Stack the label above the image */
+  align-items: center; /* Ensure label and image are aligned to center */
+  text-align: center; /* Center-align the text */
+  width: 100%; /* Adjust width for each image item */
+}
+
 .image-item img {
   width: 100%; /* Ensure images take up the full width of their containers */
   padding: 5px; /* Add padding inside the image for some space */
@@ -187,6 +255,13 @@ video {
 }
 
 .image-container {
+  display: flex;              /* Use flexbox to align images side by side */
+  justify-content: center;     /* Optional: centers the images horizontally within the div */
+  align-items: flex-start;     /* Align the images to the top (optional) */
+}
+
+.comp-container {
+  gap: 20px;
   display: flex;              /* Use flexbox to align images side by side */
   justify-content: center;     /* Optional: centers the images horizontally within the div */
   align-items: flex-start;     /* Align the images to the top (optional) */
