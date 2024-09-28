@@ -480,7 +480,7 @@
             <p>
               We demonstrate our method operating in end to end fashion on a real robot system.
             </p>
-            <h3 class="title is-3 teaser">Interactive Visualization</h3>
+            <h4 class="title is-3 teaser">Interactive Visualization</h4>
             <p>
               Use the <b>slider</b> to compare the random view selection with FisherRF depth selection. FisherRF
               improves the background and removes erroneous floaters.
@@ -595,8 +595,24 @@
 
           <div class="content has-text-justified teaser">
             <p>
-              We extend our method to touch!
+              We extend our method to touch, where we employ FisherRF depth to select touches, adding Gaussians at the touch location and performing a local smoothing to influence
+              local regions of an object. We show renderings of a mirror with only 10 random and FisherRF touches, where FisherRF fills in the <b>upper right corner</b> of the mirror.
             </p>
+
+            <p style="text-align:center; font-size:medium">Random Touches</p>
+
+            <video autoplay muted loop>
+              <source src="./static/videos/ablations-nextbestsense/random-touch.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+
+            <p style="text-align:center; font-size:medium">FisherRF Guided Touches</p>
+
+
+            <video autoplay muted loop>
+              <source src="./static/videos/ablations-nextbestsense/fisherrf-touch-1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
 
           </div>
         </div>
