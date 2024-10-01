@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Understanding and Imitating Human-Robot Motion with Restricted Visual Fields">
+  <meta name="keywords" content="Sensor-based Control, Learning from Demonstration, Imitation Learning, Motion and Path Planning, Planning under Uncertainty">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Understanding and Imitating Human-Robot Motion with Restricted Visual Fields</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.ico">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu"
+        aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://arm.stanford.edu/">
+          <span class="icon">
+            <i class="fas fa-home"></i>
+          </span>
+        </a>
+      </div>
+
+    </div>
+  </nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Understanding and Imitating Human-Robot Motion with Restricted Visual Fields</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://maulikbhatt.web.illinois.edu/">Maulik Bhatt</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://arm.stanford.edu/people/honghao-zhen">Honghao Zhen</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://me.stanford.edu/people/monroe-kennedy">Monroe Kennedy III</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://me.berkeley.edu/people/negar-mehr/">Negar Mehr</a><sup>1</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of California, Berkeley,</span>
+            <span class="author-block"><sup>2</sup>Stanford University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container ">
+    <div class="hero-body">
+        <div class="has-text-centered">
+          <img src="./static/driving/images/running_example.png" alt="Method Image." style="width: 65%" />
+        </div>
+
+</script>
+<h2 class="subtitle has-text-centered" style="font-family: inherit; font-size: inherit; font-weight: normal; margin-left: 15%; margin-right: 15%;">
+  <span class="dnerf">a robotic agent
+    whose motion policy and observation ability are decoupled.
+    The robot may move its base (orientation Φ) and independently 
+    move its camera (Ψ). The observation of the camera
+    has a limited range robs and field of view Θobs and the
+    likelihood of observing an object (Oi) within the field of
+    view. The goal is to navigate to the goal without collision,
+    and this work postulates that the correct modeling of both
+    the policy and observation model is necessary to predict the
+    motion behavior of the agent accurately.</span>
+</h2>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+             When working around humans, it is important
+            to model their perception limitations in order to predict their
+            behavior more accurately. In this work, we consider agents
+            with a limited field of view, viewing range, and ability to miss
+            objects within viewing range (e.g., transparency). By consid
+            ering the observation model independently from the motion
+            policy, we can better predict the agent’s behavior by considering
+            these limitations and approximating them. We perform a user
+            study where human operators navigate a cluttered scene while
+            scanning the region for obstacles with a limited field of view
+            and range. Using imitation learning, we show that a robot can
+            adopt a human’s strategy for observing an environment with
+            limitations on observation and navigate with minimal collision
+            with dynamic and static obstacles. We also show that this
+            learned model helps it successfully navigate a physical hardware
+            vehicle in real time.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/EJoX-sUEX6I"
+            frameborder="0" allow="autoplay; encrypted-media; accelerometer; clipboard-write; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Title of the Demo Section -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Game-based environment for human data collection</h2>
+        
+        <!-- Explanation Text -->
+        <div class="content has-text-justified">
+          <p>
+            This game was developed to study how humans interact with obstacles in a dynamic environment, where they have limited visibility.
+            The goal is to understand human navigation strategies and imitate them in autonomous robots. 
+            This video demonstrates the key concepts and features, showing how users interact with the game’s challenges in real time.
+          </p>
+        </div>
+
+        <!-- Embed the Demo Video -->
+        <div class="content has-text-centered">
+          <video controls width="100%" style="max-width: 800px;">
+            <source src="./static/driving/videos/game_demo.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <!-- More Detailed Explanations -->
+        <div class="content has-text-justified">
+          <p>
+            As shown in the demo, the player must navigate through a cluttered environment while scanning for hidden obstacles using limited field of view.
+            The game represents real-world scenarios in autonomous driving and robotics, where machines must navigate unknown environments under sensory limitations.
+          </p>
+          <p>
+            By playing this game, researchers gather valuable data on human behavior that can be applied to improve robotic motion planning algorithms.
+          </p>
+        </div>
+
+        <!-- Call-to-Action Button -->
+        <div class="content has-text-centered">
+          <a href="https://itch.io/embed-upload/11562365?color=333333" class="button is-large is-primary" target="_blank">
+            Play the Game Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Title of the Demo Section -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Physical car experiment</h2>
+        
+        <!-- Explanation Text -->
+        <div class="content has-text-justified">
+          <p>
+            We employ the diffusion policy learned from human data on a car. The car successfully navigates the environment
+            with obstacles. Like humans, the car changes its observation direction to look around, detect obstacles, and avoid them while
+            moving toward the goal in real-time
+          </p>
+        </div>
+
+        <!-- Embed the Demo Video -->
+        <div class="content has-text-centered">
+          <video controls width="100%" style="max-width: 800px;">
+            <source src="./static/driving/videos/20240910_193845.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Comment out the citation for now-->
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@misc{ZhenBhatt2024,
+    title={Understanding and Imitating Human-Robot Motion with Restricted Visual Fields}, 
+    author={Maulik Bhatt and HongHao Zhen and Monroe Kennedy III and Negar Mehr},
+    year={2024},
+    eprint={},
+    archivePrefix={arXiv},
+    primaryClass={cs.RO},
+    url={}, 
+    }</code></pre>
+  </div>
+
+
+</section> -->
+
+    
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <!-- <a class="icon-link"
+   href="./static/videos/nerfies_paper.pdf">
+  <i class="fas fa-file-pdf"></i>
+</a> -->
+      <a class="icon-link" href="https://github.com/armlabstanford"
+        class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            We thank <a
+              href="https://nerfies.github.io">Nerfies</a> for providing
+            the template for this website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </footer
+
+</body>
+</html>
