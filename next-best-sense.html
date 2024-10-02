@@ -100,7 +100,7 @@
                 style="color: blue;">Best</span> <span style="color: purple;">Sense</span>: Guiding Vision and Touch
               with FisherRF for 3D
               Gaussian Splatting</h1>
-            <b>Stay tuned in ~1 week for the full videos, paper, and code release!</b>
+            <b>Stay tuned this week for the paper and code release!</b>
             <div class="is-size-5 publication-authors">
 
               <span class="author-block">
@@ -200,6 +200,16 @@
 
   <section class="section">
     <div class="container is-max-desktop">
+
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+
+          <div class="content has-text-justified teaser">
+            <img src="./static/nextbestsense/splash_next_best.png" alt="Method Image."
+              style="width: 40%; display: block; margin: auto;" />
+          </div>
+        </div>
+      </div>
       <!-- Abstract. -->
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
@@ -247,18 +257,43 @@
     </div>
   </section>
 
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <video id="splash-video" autoplay controls muted loop playsinline
+          preload="metadata" height="100%">
+          <source src="./static/videos/nbs-vid.mp4"
+            type="video/mp4">
+        </video>
+        <script>
+    if ('IntersectionObserver' in window) {
+      // Use Intersection Observer for lazy loading the video
+      let videoObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const video = entry.target;
+            video.src = video.querySelector('source').src;
+            video.load();
+            videoObserver.unobserve(video);
+          }
+        });
+      }, {threshold: 0.10}); // Trigger when 75% of the video is visible
+  
+      videoObserver.observe(document.getElementById('splash-video'));
+    }
+  </script>
+        <h2 class="subtitle has-text-centered">
+          <span class="dnerf">Next Best Sense draws upon state of the art vision models to train few-shot Gaussian Splatting scenes,
+            and turns to impressive next best view selection methods to guide robotic manipulator next best view and touch selection in the wild.</span>
+        </h2>
+      </div>
+    </div>
+  </section>
+
   <section class="section">
     <div class="container is-max-desktop">
 
-      <div class="columns is-centered">
-        <div class="column is-full-width">
 
-          <div class="content has-text-justified teaser">
-            <img src="./static/nextbestsense/splash_next_best.png" alt="Method Image."
-              style="width: 50%; display: block; margin: auto;" />
-          </div>
-        </div>
-      </div>
 
       <div class="columns is-centered">
         <div class="column is-full-width">
