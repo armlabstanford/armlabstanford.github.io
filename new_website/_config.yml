@@ -1,10 +1,10 @@
 # Site settings
-title:       Pixyll
+title:       ARMLab Stanford
 email:       your_email@example.com
-author:      John Otander
-description: "A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff."
+author:      Monroe Kennedy III
+description: "Official Website of the Stanford ARMLab."
 baseurl:     ""
-url:         "https://pixyll.com"
+url:         "https://arm.stanford.edu"
 date_format: "%b %-d, %Y"
 header_pages:
  - about.md

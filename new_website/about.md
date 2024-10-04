@@ -5,6 +5,10 @@ permalink: /about/
 tags: about
 ---
 
+The ARMLab is directed by Assistant Professor Monroe Kennedy III in the Mechanical Engineering department at Stanford University. 
+
+Our lab community is purposefully diverse, bringing together amazing, unique students who are passionate about making a positive difference in the world through robotics.
+
 This Jekyll theme was crafted with <3 by [John Otander](https://johno.com/)
 ([@4lpine](https://twitter.com/4lpine)).
 
