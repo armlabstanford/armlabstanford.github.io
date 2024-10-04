@@ -1,2 +1,4 @@
 *.DS_Store
 *.swp
+new_website/_site/*
+new_website/.sass-cache/*
