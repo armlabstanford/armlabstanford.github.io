@@ -1,1 +1,6 @@
 theme: jekyll-theme-tactile
+
+# Navigation bar
+nav:
+  - home: index.md
+  - about: about.md
