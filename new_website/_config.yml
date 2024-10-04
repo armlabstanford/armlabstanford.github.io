@@ -1,14 +1,16 @@
 # Site settings
 title:       ARMLab Stanford
-email:       your_email@example.com
+email:       monroek@stanford.edu
 author:      Monroe Kennedy III
 description: "Official Website of the Stanford ARMLab."
 baseurl:     ""
 url:         "https://arm.stanford.edu"
 date_format: "%b %-d, %Y"
 header_pages:
- - about.md
- - contact.html
+ - research.md
+ - people.md
+ - publications.md
+ - contact.md
 
 # Google services
 google_verification:

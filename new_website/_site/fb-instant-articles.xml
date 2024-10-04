@@ -458,6 +458,35 @@ and <a href="https://en.wikipedia.org/wiki/Textile_(markup_language)">Textile</a
     
         
             <item>
+                <title>So, What is Jekyll?</title>
+                <link>http://localhost:4000/jekyll/pixyll/2014/06/09/so-what-is-jekyll/</link>
+                <content:encoded>
+                    <![CDATA[
+                    <p>Jekyll is a tool for transforming your plain text into static websites and 
+blogs. It is simple, static, and blog-aware. Jekyll uses the 
+<a href="https://shopify.dev/docs/themes/liquid/reference/basics">Liquid</a> templating
+language and has builtin <a href="https://daringfireball.net/projects/markdown/">Markdown</a>
+and <a href="https://en.wikipedia.org/wiki/Textile_(markup_language)">Textile</a> support.</p>
+
+<p>It also ties in nicely to <a href="https://pages.github.com/">GitHub Pages</a>.</p>
+
+<p>Learn more about Jekyll on their <a href="https://jekyllrb.com/">website</a>.</p>
+
+                    ]]>
+                </content:encoded>
+                <guid isPermaLink="false">/jekyll/pixyll/2014/06/09/so-what-is-jekyll/</guid>
+                <description>
+                    
+                    Transform your plain text into static websites and blogs. Simple, static, and blog-aware.
+                    
+                </description>
+                <pubDate>Mon, 09 Jun 2014 05:32:18 -0700</pubDate>
+                <author>Monroe Kennedy III</author>
+            </item>
+        
+    
+        
+            <item>
                 <title>Pixyll has Pagination</title>
                 <link>http://localhost:4000/jekyll/pixyll/2014/06/08/pixyll-has-pagination/</link>
                 <content:encoded>
