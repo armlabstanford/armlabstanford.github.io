@@ -38,6 +38,9 @@
 <loc>http://localhost:4000/contact/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/home/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/</loc>
 </url>
 <url>
@@ -50,9 +53,9 @@
 <loc>http://localhost:4000/research/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/thanks/</loc>
+<loc>http://localhost:4000/test/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/page2/</loc>
+<loc>http://localhost:4000/thanks/</loc>
 </url>
 </urlset>

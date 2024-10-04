@@ -1,7 +1,8 @@
 ---
-title: About
-layout: default
-filename: about
+layout: page
+title: About and Join
+permalink: /about/
+tags: about
 ---
 
 # About and Join

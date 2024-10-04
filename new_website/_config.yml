@@ -7,7 +7,7 @@ baseurl:     ""
 url:         "https://arm.stanford.edu"
 date_format: "%b %-d, %Y"
 header_pages:
- - home.md
+ - index.md
  - about.md
 #  - research.md
 #  - people.md
