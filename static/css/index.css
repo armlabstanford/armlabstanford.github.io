@@ -254,6 +254,50 @@ video {
   font-weight: bold;
 }
 
+.custom-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows elements to wrap on smaller screens */
+  align-items: center; /* Optional: Center items vertically */
+}
+
+.custom-banner,
+.custom-heading,
+.custom-video {
+  flex: 1 1 0;
+  margin: 10px;
+  min-width: 0; /* Allows flex items to shrink below content size */
+  box-sizing: border-box; /* Includes padding and borders in width calculations */
+}
+
+.custom-banner {
+  flex-basis: 30%; /* Adjust the percentage as needed */
+}
+
+.custom-heading {
+  flex-basis: 20%; /* Adjust the percentage as needed */
+  text-align: center;
+}
+
+.custom-video {
+  flex-basis: 45%; /* Adjust the percentage as needed */
+}
+
+.custom-banner img,
+.custom-video {
+  max-width: 100%; /* Ensures media does not exceed container width */
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .custom-banner,
+  .custom-heading,
+  .custom-video {
+    flex-basis: 100%; /* Stacks elements vertically on smaller screens */
+  }
+}
+
+
+
 .image-container {
   display: flex;              /* Use flexbox to align images side by side */
   justify-content: center;     /* Optional: centers the images horizontally within the div */
