@@ -8,6 +8,7 @@ url:         "https://arm.stanford.edu"
 date_format: "%b %-d, %Y"
 header_pages:
  - home.md
+ - about.md
  - research.md
  - people.md
  - publications.md
