@@ -9,8 +9,8 @@ date_format: "%b %-d, %Y"
 header_pages:
  - index.md
  - about.md
-#  - research.md
-#  - people.md
+ - research.md
+ - people.md
 #  - publications.md
 
 # Google services
@@ -80,6 +80,14 @@ share_tumblr: false
 share_reddit: false
 share_stumbleupon: false
 share_hackernews: false
+
+collections:
+  research:
+    output: true
+    permalink: /research/:path/
+  people:
+    output: true
+    permalink: /people/:path/
 
 text:
   pagination:

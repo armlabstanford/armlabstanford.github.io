@@ -1,0 +1,53 @@
+.person-card {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    max-width: 600px;
+    background-color: white;
+    margin-bottom: 20px; /* Add spacing between cards */
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.person-info {
+    flex: 1;
+}
+
+.person-name {
+    font-size: 1.5em;
+    color: #cd5050; /* Match the green color in the example */
+    margin: 0;
+}
+
+.advisor {
+    font-size: 0.8em;
+    color: #999;
+}
+
+.social-icons {
+    margin: 10px 0;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #cd5050;
+    margin-right: 10px;
+    background-image: none;
+}
+
+.person-description {
+    font-size: 1em;
+    color: #333;
+}
+
+.social-icons i {
+    font-size: 1.2em;
+}

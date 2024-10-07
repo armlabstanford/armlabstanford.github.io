@@ -11,12 +11,12 @@ The broad research objective of the Assistive Robotics and Manipulation Lab is t
 
 <b>Research Topics</b>
 
-{% assign posts_count = site.posts | size %}
+{% assign posts_count = site.research | size %}
 
 <div class="home">
   {% if posts_count > 0 %}
     <div class="posts">
-      {% for post in site.posts %}
+      {% for post in site.research %}
         <div class="post py3">
           <a href="{{ post.url | relative_url }}" class="post-link"><h3 class="h1 post-title">{{ post.title }}</h3></a>
           <span class="post-summary">
