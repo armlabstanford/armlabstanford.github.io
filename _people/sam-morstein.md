@@ -1,8 +1,8 @@
 ---
 layout:     post
 name:      Sam Morstein
-image: shivani.jpeg
-website: https://www.linkedin.com/in/shivani-guptasarma/
+image: sam.jpg
+website: https://www.linkedin.com/in/sammorstein/
 github: sammorstein
 student: master
 date:  2014-06-09 12:32:18
