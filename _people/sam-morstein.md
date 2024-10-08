@@ -2,7 +2,8 @@
 layout:     post
 name:      Sam Morstein
 image: sam.jpg
-website: https://www.linkedin.com/in/sammorstein/
+website: 
+linkedin: https://www.linkedin.com/in/sammorstein/
 github: sammorstein
 person: master
 date:  2014-06-09 12:32:18

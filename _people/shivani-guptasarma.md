@@ -2,7 +2,8 @@
 layout:     post
 name:      Shivani Guptasarma
 image: shivani.jpeg
-website: https://www.linkedin.com/in/shivani-guptasarma/
+website: 
+linkedin: https://www.linkedin.com/in/shivani-guptasarma/
 github: sguptasarma
 person: phd
 date:  2014-06-09 12:32:18

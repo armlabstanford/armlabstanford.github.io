@@ -3,6 +3,7 @@ layout:     post
 name:      Won Kyung Do
 image: won.jpeg
 website: https://wonkyungdo.github.io/website_wkdo/
+linkedin: https://www.linkedin.com/in/wonkyung-do 
 person: phd
 github: WonkyungDo
 scholar: 9ltuHxAAAAAJ
