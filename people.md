@@ -124,7 +124,7 @@ tags: people
     <h3> PhD and Postdoc Alumni </h3>
     <div class="posts">
       {% for post in site.people %}
-      {% if post.person == "alumni_phd" %}
+      {% if post.person == "alumni_phd_postdoc" %}
       <div class="person-card">
             <img src="images/{{ post.image }}" alt="{{ post.name }}" class="profile-image">
             <div class="person-info">
