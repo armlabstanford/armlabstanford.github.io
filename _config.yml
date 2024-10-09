@@ -11,7 +11,7 @@ header_pages:
  - about.md
  - research.md
  - people.md
-#  - publications.md
+ - publications.md
 # - courses.md
 
 # Google services
@@ -89,6 +89,9 @@ collections:
   people:
     output: true
     permalink: /people/:path/
+  publications:
+    output: true
+    permalink: /publications/:path/
 
 text:
   pagination:
