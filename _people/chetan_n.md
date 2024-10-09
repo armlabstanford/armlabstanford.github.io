@@ -2,7 +2,7 @@
 layout:     post
 name:      Chetan Narayanaswamy
 image: chetan_n.jpg
-website: https://chetanreddy1412.github.io/
+website: http://chetanreddyn.github.io/
 linkedin: https://www.linkedin.com/in/chetan-reddy-n-566b641aa 
 github: 
 person: master
