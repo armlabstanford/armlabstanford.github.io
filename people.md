@@ -5,14 +5,14 @@ permalink: /people/
 tags: people
 ---
 
-<h3> ARMLab People </h3>
+<h1> ARMLab People </h1>
 
 
 {% assign posts_count = site.people | size %}
 
 <div class="home">
 
-<h3>Professor</h3> <br>
+<h2>Professor</h2> <br>
 
 <div class="posts">
       {% for post in site.people %}
@@ -39,7 +39,7 @@ tags: people
       {% endfor %}
     </div>
 
-<h3>Postdoc</h3> <br>
+<!-- <h3>Postdoc</h3> <br> -->
 
 <h3>PhD Students</h3>
 
@@ -53,8 +53,15 @@ tags: people
             <div class="person-info">
                 <h2 class="person-name">{{ post.name }}</h2>
                 <div class="social-icons">
+                {% if post.website %}
                     <a href="{{ post.website }}"><i class="fas fa-home"></i></a>
+                {% endif %}
+                {% if post.linkedin %}
+                    <a href="{{ post.linkedin }}"><i class="fa fa-linkedin"></i></a>
+                {% endif %}
+                    {% if post.github %}
                     <a href="https://github.com/{{ post.github }}"><i class="fab fa-github"></i></a>
+                    {% endif %} 
                     {% if post.scholar %}
                         <a href="https://scholar.google.com/citations?user={{ post.scholar }}&hl=en"><i class="fas fa-graduation-cap"></i></a>
                     {% endif %}
@@ -78,8 +85,12 @@ tags: people
             <div class="person-info">
                 <h2 class="person-name">{{ post.name }}</h2>
                 <div class="social-icons">
-                    <a href="{{ post.website }}"><i class="fas fa-home"></i></a>
+                    {% if post.website %}
+                        <a href="{{ post.website }}"><i class="fas fa-home"></i></a>
+                    {% endif %}
+                    {% if post.github %}
                     <a href="https://github.com/{{ post.github }}"><i class="fab fa-github"></i></a>
+                    {% endif %}
                     {% if post.scholar %}
                         <a href="https://scholar.google.com/citations?user={{ post.scholar }}&hl=en"><i class="fas fa-graduation-cap"></i></a>
                     {% endif %}
@@ -103,7 +114,9 @@ tags: people
             <div class="person-info">
                 <h2 class="person-name">{{ post.name }}</h2>
                 <div class="social-icons">
-                    <a href="{{ post.website }}"><i class="fas fa-home"></i></a>
+                    {% if post.website %}
+                        <a href="{{ post.website }}"><i class="fas fa-home"></i></a>
+                    {% endif %}
                     {% if post.github %}
                     <a href="https://github.com/{{ post.github }}"><i class="fab fa-github"></i></a>
                     {% endif %}
@@ -130,7 +143,9 @@ tags: people
             <div class="person-info">
                 <h2 class="person-name">{{ post.name }}</h2>
                 <div class="social-icons">
-                    <a href="{{ post.website }}"><i class="fas fa-home"></i></a>
+                    {% if post.website %}
+                        <a href="{{ post.website }}"><i class="fas fa-home"></i></a>
+                    {% endif %}
                     {% if post.github %}
                     <a href="https://github.com/{{ post.github }}"><i class="fab fa-github"></i></a>
                     {% endif %}
