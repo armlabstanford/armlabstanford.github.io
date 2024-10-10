@@ -13,6 +13,7 @@
   date: "May 2024"
   bibtex: "/papers/dt-mini.bib"
   arxiv: "https://arxiv.org/abs/2309.08860"
+  camera_ready: https://ieeexplore.ieee.org/document/10610583
   website: "https://sites.google.com/view/densetact-mini/"
   video: "/papers/dtmini2.mp4" # add your gif path here
 
@@ -22,5 +23,6 @@
   date: "May 2022"
   bibtex: "/papers/dtv1.bib"
   arxiv: "https://arxiv.org/abs/2201.01367"
+  camera_ready: https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9811966
   website: "https://youtu.be/nhQzhsjbcQA?si=ufHSxqL9lnG4P5ed"
   video: "/papers/dtv1.mp4" # add your gif path here

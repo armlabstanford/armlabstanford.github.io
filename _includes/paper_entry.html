@@ -21,9 +21,14 @@
                     <i class="fas fa-link"></i> Website
                 </a>
             {% endif %}
+            {% if include.paper.camera_ready %}
+                <a href="{{ include.paper.venue_paper_link }}" class="button" style="background-color: #c83636; color:white">
+                    <i class="fa-solid fa-camera"></i> Camera Ready
+                </a>
+            {% endif %}
             {% if include.paper.arxiv %}
                 <a href="{{ include.paper.arxiv }}" class="button" style="background-color: #c83636; color:white">
-                    <i class="fas fa-file"></i> arXiv
+                    <i class="fas fa-newspaper"></i> arXiv
                 </a>
             {% endif %}
             {% if include.paper.bibtex %}
