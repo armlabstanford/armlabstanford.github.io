@@ -1,6 +1,6 @@
 - title: "Touch-GS: Visual-Tactile Supervised 3D Gaussian Splatting"
   authors: "<b>Aiden Swann*</b>, <b>Matthew Strong*</b>, <b>Won Kyung Do</b>, Gadiel Sznaier Camps, Mac Schwager, <b>Monroe Kennedy III</b>"
-  conference: " Proceedings of the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)"
+  venue: " Proceedings of the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)"
   date: "October 2024"
   bibtex: "/papers/touch-gs.bib"
   arxiv: "https://arxiv.org/abs/2403.09875"
@@ -9,9 +9,20 @@
 
 - title: "DenseTact-Mini: An Optical Tactile Sensor for Grasping Multi-Scale Objects From Flat Surfaces"
   authors: "<b> Won Kyung Do</b>, <b>Ankush Dhawan</b>, <b>Mathilda Kitzmann</b>, <b>Monroe Kennedy III </b>"
-  conference: "International Conference on Robotics and Automation (ICRA)"
+  venue: "International Conference on Robotics and Automation (ICRA)"
   date: "May 2024"
   bibtex: "/papers/dt-mini.bib"
   arxiv: "https://arxiv.org/abs/2309.08860"
+  camera_ready: https://ieeexplore.ieee.org/document/10610583
   website: "https://sites.google.com/view/densetact-mini/"
   video: "/papers/dtmini2.mp4" # add your gif path here
+
+- title: "DenseTact: Optical Tactile Sensor for Dense Shape Reconstruction"
+  authors: "<b> Won Kyung Do</b>, <b>Monroe Kennedy III </b>"
+  venue: "International Conference on Robotics and Automation (ICRA)"
+  date: "May 2022"
+  bibtex: "/papers/dtv1.bib"
+  arxiv: "https://arxiv.org/abs/2201.01367"
+  camera_ready: https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9811966
+  website: "https://youtu.be/nhQzhsjbcQA?si=ufHSxqL9lnG4P5ed"
+  video: "/papers/dtv1.mp4" # add your gif path here

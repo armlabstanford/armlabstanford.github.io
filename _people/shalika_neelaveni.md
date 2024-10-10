@@ -1,7 +1,7 @@
 ---
 layout:     post
 name:      Shalika Neelaveni
-image: shalika_n.png
+image: shalika.jpg
 website: 
 linkedin: https://www.linkedin.com/in/shalikaneelaveni/
 github: 

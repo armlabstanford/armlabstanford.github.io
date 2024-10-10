@@ -5,33 +5,41 @@ permalink: /research/
 tags: research
 ---
 
-The broad research objective of the Assistive Robotics and Manipulation Lab is to develop technology that improves everyday life by anticipating and acting on the needs of human counterparts. We specialize in developing intelligent robotic systems that can perceive and model environments, humans and tasks and leverage these models to predict system processes and understand their assistive role. The research can be divided into the following sub-categories: robotic assistants, connected devices and intelligent wearables.  We use a combination of tools in dynamical systems analysis, control theory (classical, non-linear and robust control), state estimation and prediction, motion planning, vision for robotic autonomy and machine learning. Our lab focuses heavily on both the analytical and experimental components of assistive technology design. While our application area domain is autonomous assistive technology, our primary focus is robotic assistants (mobile manipulators and humanoids) with the goal of deployment for service tasks that may be highly dynamic and require dexterity, situational awareness, and human-robot collaboration.
-
-
-
-<b>Research Topics</b>
-
-{% assign posts_count = site.research | size %}
-
-<div class="home">
-  {% if posts_count > 0 %}
-    <div class="posts">
-      {% for post in site.research %}
-        <div class="post py3">
-          <a href="{{ post.url | relative_url }}" class="post-link"><h3 class="h1 post-title">{{ post.title }}</h3></a>
-          <span class="post-summary">
-            {% if post.summary %}
-              {{ post.summary }}
-            {% else %}
-              {{ post.excerpt }}
-            {% endif %}
-          </span>
+<div class="research-section">
+    <h1>Research</h1>
+    <p>
+        Our mission is to develop theoretical foundations and practical algorithms for interactive robot learning. Our group is focused on formalizing interactions and how to learn from diverse sources of data to build sample-efficient, human-aligned, and interactive robot policies. We leverage tools from machine learning, control theory, and cognitive science for building robots that can seamlessly coordinate with, collaborate with, compete with, or influence humans.
+    </p>
+    <div class="video-gallery" style="display: flex; gap: 20px; justify-content: center;">
+        <!-- Video 1 -->
+        <div class="video-item" style="text-align: center; width: 300px;">
+            <div class="video-wrapper" style="border-radius: 10px; overflow: hidden;">
+                <video width="100%" height="auto" autoplay muted loop playsinline>
+                    <source src="/papers/inter.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <h3 style="color: green;">Foundation Models for Robotics</h3>
         </div>
-      {% endfor %}
+        <!-- Video 2 -->
+        <div class="video-item" style="text-align: center; width: 300px;">
+            <div class="video-wrapper" style="border-radius: 10px; overflow: hidden;">
+                <video width="100%" height="auto" autoplay muted loop playsinline>
+                    <source src="path_to_video_2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <h3 style="color: green;">Interactive Robot Learning</h3>
+        </div>
+        <!-- Video 3 -->
+        <div class="video-item" style="text-align: center; width: 300px;">
+            <div class="video-wrapper" style="border-radius: 10px; overflow: hidden;">
+                <video width="100%" height="auto" autoplay muted loop playsinline>
+                    <source src="path_to_video_3.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <h3 style="color: green;">Human-AI/Robot Interaction</h3>
+        </div>
     </div>
-
-    {% include pagination.html %}
-  {% else %}
-    <h1 class='center'>{{ site.text.index.coming_soon }}</h1>
-  {% endif %}
 </div>
