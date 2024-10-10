@@ -1,0 +1,28 @@
+<div class="paper-entry">
+    <h3 class="paper-title">
+        <strong>{{ include.paper.title }}</strong>
+    </h3>
+    <p class="paper-authors">
+        {{ include.paper.authors }}
+    </p>
+    <p class="paper-conference">
+        <em>{{ include.paper.conference }}</em>, {{ include.paper.date }}
+    </p>
+    <div class="paper-buttons" style="display: flex; gap: 10px; margin-top: 10px;">
+        {% if include.paper.bibtex %}
+            <a href="{{ include.paper.bibtex }}" class="button" style="background-color: #4CAF50;">
+                <i class="fas fa-file"></i> BibTeX
+            </a>
+        {% endif %}
+        {% if include.paper.arxiv %}
+            <a href="{{ include.paper.arxiv }}" class="button" style="background-color: #4CAF50;">
+                <i class="fas fa-file"></i> arXiv
+            </a>
+        {% endif %}
+        {% if include.paper.website %}
+            <a href="{{ include.paper.website }}" class="button" style="background-color: #4CAF50;">
+                <i class="fas fa-link"></i> Website
+            </a>
+        {% endif %}
+    </div>
+</div>
