@@ -151,23 +151,11 @@
   authors: " <b>Won Kyung Do</b>, <b>Bianca Jurewicz</b>, <b>Monroe Kennedy III </b>"
   venue: "2023 IEEE International Conference on Robotics and Automation (ICRA)"
   date: "May 2023"
-  bibtex: "/papers/bibs/.bib"
+  bibtex: "/papers/bibs/dtv2.bib"
   arxiv: "https://arxiv.org/abs/2209.10122"
   camera_ready: "https://ieeexplore.ieee.org/document/10161150"
   website: "https://youtu.be/8kDZjkrEZkQ?si=ir3cb8AKsmkfHg7F"
   video: "/papers/dt2.mp4" # add your gif path here
-
-
-# - title: ""
-#   authors: " <b>Monroe Kennedy III </b>"
-#   venue: ""
-#   date: "May 2023"
-#   bibtex: "/papers/bibs/.bib"
-#   arxiv: ""
-#   camera_ready: 
-#   website: ""
-#   video: "/papers/.mp4" # add your gif path here
-
 
 - title: "DenseTact: Optical Tactile Sensor for Dense Shape Reconstruction"
   authors: "<b> Won Kyung Do</b>, <b>Monroe Kennedy III </b>"
@@ -178,3 +166,31 @@
   camera_ready: "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9811966"
   website: "https://youtu.be/nhQzhsjbcQA?si=ufHSxqL9lnG4P5ed"
   video: "/papers/dtv1.mp4" # add your gif path here
+
+- title: "Considerations for the Control Design of Augmentative Robots"
+  authors: "<b>Shivani Guptasarma</b>, <b>Monroe Kennedy III </b>"
+  venue: "arXiv"
+  date: "October 2023"
+  bibtex: "/papers/bibs/consider_aug_rob.bib"
+  arxiv: "https://arxiv.org/abs/2310.19336"
+
+- title: "Replay Overshooting: Learning Stochastic Latent Dynamics with the Extended Kalman Filter"
+  authors: " <b>Monroe Kennedy III </b>"
+  venue: "2021 IEEE International Conference on Robotics and Automation (ICRA)"
+  date: "May 2023"
+  bibtex: "/papers/bibs/replay_overshoot.bib"
+  arxiv: "https://alberthli.github.io/files/conference/ro_final.pdf"
+  camera_ready: "https://ieeexplore.ieee.org/abstract/document/9560811"
+  website: "https://youtu.be/WbYPJVd8FFI"
+  video: "/papers/replay_overshoot.mp4" # add your gif path here
+
+# - title: ""
+#   authors: " <b>Monroe Kennedy III </b>"
+#   venue: ""
+#   date: "May 2023"
+#   bibtex: "/papers/bibs/.bib"
+#   arxiv: ""
+#   camera_ready: ""
+#   website: ""
+#   video: "/papers/.mp4" # add your gif path here
+
