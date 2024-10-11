@@ -1,20 +1,27 @@
 - title: "An Augmented Reality Interface for Teleoperating Robot Manipulators: Reducing Demonstrator Task Load through Digital Twin Control"
   authors: "<b> Aliyah Smith</b>, <b>Monroe Kennedy III </b>"
-  venue: "Arixiv"
+  venue: "arXiv"
   date: "September 2024"
-  bibtex: "/papers/ar_telop_aliyah_sept2024.bib"
+  bibtex: "/papers/bibs/ar_telop_aliyah_sept2024.bib"
   arxiv: "https://arxiv.org/abs/2409.18394"
   website: "https://youtu.be/w-M58ohPgrA"
   video: "/papers/ar_telop_9_2024.gif" # add your gif path here
 
 
-
+- title: "SAFER-Splat: A Control Barrier Function for Safe Navigation with Online Gaussian Splatting Maps"
+  authors: "Timothy Chen, <b>Aiden Swann</b>, Javier Yu, Ola Shorinwa, Riku Murai,  <b>Monroe Kennedy III</b>, Mac Schwager "
+  venue: "arXiv"
+  date: "September 2024"
+  bibtex: "/papers/bibs/safe_splat2024.bib"
+  arxiv: "https://arxiv.org/abs/2409.09868"
+  website: "https://chengine.github.io/safer-splat/"
+  video: "/papers/teaser_safer_splat2024.mp4" # add your gif path here
 
 - title: "Touch-GS: Visual-Tactile Supervised 3D Gaussian Splatting"
   authors: "<b>Aiden Swann*</b>, <b>Matthew Strong*</b>, <b>Won Kyung Do</b>, Gadiel Sznaier Camps, Mac Schwager, <b>Monroe Kennedy III</b>"
   venue: " Proceedings of the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)"
   date: "October 2024"
-  bibtex: "/papers/touch-gs.bib"
+  bibtex: "/papers/bibs/touch-gs.bib"
   arxiv: "https://arxiv.org/abs/2403.09875"
   website: "https://touch-gs.github.io/"
   video: "/papers/tgs.mp4" # add your gif path here
@@ -23,7 +30,7 @@
   authors: "<b> Won Kyung Do</b>, <b>Ankush Dhawan</b>, <b>Mathilda Kitzmann</b>, <b>Monroe Kennedy III </b>"
   venue: "International Conference on Robotics and Automation (ICRA)"
   date: "May 2024"
-  bibtex: "/papers/dt-mini.bib"
+  bibtex: "/papers/bibs/dt-mini.bib"
   arxiv: "https://arxiv.org/abs/2309.08860"
   camera_ready: https://ieeexplore.ieee.org/document/10610583
   website: "https://sites.google.com/view/densetact-mini/"
@@ -33,7 +40,7 @@
   authors: "<b> Won Kyung Do</b>, <b>Monroe Kennedy III </b>"
   venue: "International Conference on Robotics and Automation (ICRA)"
   date: "May 2022"
-  bibtex: "/papers/dtv1.bib"
+  bibtex: "/papers/bibs/dtv1.bib"
   arxiv: "https://arxiv.org/abs/2201.01367"
   camera_ready: https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9811966
   website: "https://youtu.be/nhQzhsjbcQA?si=ufHSxqL9lnG4P5ed"
