@@ -13,33 +13,39 @@ tags: research
     <div class="video-gallery" style="display: flex; gap: 20px; justify-content: center;">
         <!-- Video 1 -->
         <div class="video-item" style="text-align: center; width: 300px;">
-            <div class="video-wrapper" style="border-radius: 10px; overflow: hidden;">
-                <video width="100%" height="auto" autoplay muted loop playsinline>
-                    <source src="/papers/inter.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <h3 style="color: green;">Foundation Models for Robotics</h3>
+            <a href="/research/robotic-intent-estimation" style="text-decoration: none; color: inherit;">
+                <div class="video-wrapper" style="border-radius: 10px; overflow: hidden; width: 300px; height: auto; aspect-ratio: 16/9;">
+                    <video width="100%" height="100%" autoplay muted loop playsinline style="object-fit: cover;">
+                        <source src="/papers/proact.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <h3 style="color: #c83636;">Robotic Intent Estimation and Wearables</h3>
+            </a>
         </div>
-        <!-- Video 2 -->
+        <!-- Video 2 (Square aspect ratio) -->
         <div class="video-item" style="text-align: center; width: 300px;">
-            <div class="video-wrapper" style="border-radius: 10px; overflow: hidden;">
-                <video width="100%" height="auto" autoplay muted loop playsinline>
-                    <source src="path_to_video_2.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <h3 style="color: green;">Interactive Robot Learning</h3>
+            <a href="/research/robot-manipulation-teleoperation" style="text-decoration: none; color: inherit;">
+                <div class="video-wrapper" style="border-radius: 10px; overflow: hidden; width: 200px; height: 200px; aspect-ratio: 1/1; margin: 0 auto;">
+                    <video width="100%" height="100%" autoplay muted loop playsinline style="object-fit: cover;">
+                        <source src="/papers/inter.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <h3 style="color: #c83636;">Robot Manipulation and Teleoperation</h3>
+            </a>
         </div>
         <!-- Video 3 -->
         <div class="video-item" style="text-align: center; width: 300px;">
-            <div class="video-wrapper" style="border-radius: 10px; overflow: hidden;">
-                <video width="100%" height="auto" autoplay muted loop playsinline>
-                    <source src="path_to_video_3.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <h3 style="color: green;">Human-AI/Robot Interaction</h3>
+            <a href="/research/advanced-robotic-autonomy" style="text-decoration: none; color: inherit;">
+                <div class="video-wrapper" style="border-radius: 10px; overflow: hidden; width: 400px; height: auto; aspect-ratio: 21/9; margin: 0 auto;">
+                    <video width="100%" height="100%" autoplay muted loop playsinline style="object-fit: cover;">
+                        <source src="/papers/car_visual_field.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <h3 style="color: #c83636;">Advanced Robotic Autonomy</h3>
+            </a>
         </div>
     </div>
 </div>
