@@ -1,3 +1,15 @@
+- title: "An Augmented Reality Interface for Teleoperating Robot Manipulators: Reducing Demonstrator Task Load through Digital Twin Control"
+  authors: "<b> Aliyah Smith</b>, <b>Monroe Kennedy III </b>"
+  venue: "Arixiv"
+  date: "September 2024"
+  bibtex: "/papers/ar_telop_aliyah_sept2024.bib"
+  arxiv: "https://arxiv.org/abs/2409.18394"
+  website: "https://youtu.be/w-M58ohPgrA"
+  video: "/papers/ar_telop_9_2024.gif" # add your gif path here
+
+
+
+
 - title: "Touch-GS: Visual-Tactile Supervised 3D Gaussian Splatting"
   authors: "<b>Aiden Swann*</b>, <b>Matthew Strong*</b>, <b>Won Kyung Do</b>, Gadiel Sznaier Camps, Mac Schwager, <b>Monroe Kennedy III</b>"
   venue: " Proceedings of the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)"
