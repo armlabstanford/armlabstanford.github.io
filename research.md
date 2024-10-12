@@ -44,7 +44,7 @@ tags: research
                         Your browser does not support the video tag.
                     </video>
                 </div>
-                <h3 style="color: #c83636;">Advanced Robotic Autonomy</h3>
+                <h3 style="color: #c83636;">Robotic Autonomy and Collaboration</h3>
             </a>
         </div>
     </div>
