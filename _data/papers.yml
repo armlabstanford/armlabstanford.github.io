@@ -184,6 +184,23 @@
   website: "https://youtu.be/WbYPJVd8FFI"
   video: "/papers/replay_overshoot.mp4" # add your gif path here
 
+
+- title: "Recent Development in Human Motion and Gait Prediction"
+  authors: "<b>Junwu Zhang</b>, <b>Monroe Kennedy III </b>"
+  venue: "RSS 2020 Workshop RobRetro"
+  date: "June 2020"
+  bibtex: "/papers/bibs/human_gait_pred2020.bib"
+  camera_ready: "https://openreview.net/forum?id=4i6Twi16jxS"
+
+
+- title: "Modeling And Control For Robotic Assistants: Single And Multi-Robot Manipulation"
+  authors: " <b>Monroe Kennedy III </b>"
+  venue: "University of Pennsylvania"
+  date: "May 2019"
+  bibtex: "/papers/bibs/kennedy_thesis.bib"
+  camera_ready: "https://repository.upenn.edu/entities/publication/3befc894-2c95-4279-b09d-d2973ae6ffe0"
+
+
 # - title: ""
 #   authors: " <b>Monroe Kennedy III </b>"
 #   venue: ""
