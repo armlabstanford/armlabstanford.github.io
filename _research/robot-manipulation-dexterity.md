@@ -14,7 +14,7 @@ This page shows ARMLab advances in robotic dexterity both in mechanical design o
 
 ---
 
-### 1. **Applications of Robotic Dexterity**
+### **<u>Applications of Robotic Dexterity</u>**
 
 #### Description:
 This research pushes the limits of robotic dexterity and embodied intelligence. We often leverage our advances in tactile sensing with DenseTact to enable robotic manipulators to perform complex, dexterous tasks.
@@ -29,49 +29,48 @@ This research pushes the limits of robotic dexterity and embodied intelligence. 
 
 #### Papers and Videos:
 
-<div style="text-align: center;">
-    <figure>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/V4kobT9OGkc?si=KYQuC8E18SP4Z9DL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <figcaption><a href="https://armlabstanford.github.io/dynamic-cloth-detection">Dynamic Layer Detection of a Thin Silk Cloth using DenseTact Optical Tactile Sensors</a></figcaption>
-    </figure>
-</div>
+<button onclick="toggleVisibility('papers-videos-applications-dexterity-section')" style="background-color: #f1f1f1; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer; border-radius: 5px;">Show/Hide Papers and Videos</button>
 
-<div style="text-align: center;">
-    <figure>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/l-pjQV-se-o?si=zieX4MWXQQcdpZaF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <figcaption><a href="https://sites.google.com/view/inter-finger-manipulation">Inter-finger Small Object Manipulation with DenseTact Optical Tactile Sensor</a></figcaption>
-    </figure>
-</div>
-
-<div style="text-align: center;">
-<figure>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4OtpI915GM?si=YfAPcUzLQ8IiuwTP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <figcaption><a href="https://sites.google.com/view/densetact-mini/">DenseTact-Mini: An Optical Tactile Sensor for Grasping Multi-Scale Objects From Flat Surfaces</a></figcaption>
-</figure>
-</div>
-
-<div style="text-align: center;">
-<figure>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4OtpI915GM?si=YfAPcUzLQ8IiuwTP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <figcaption><a href="https://sites.google.com/stanford.edu/embeddedobjectdetection/">Embedded Object Detection and Mapping in Soft Materials Using Optical Tactile Sensing</a></figcaption>
-</figure>
-</div>
-
-<figure style="max-width: 75%; margin: 0 auto; text-align: center;">
-    <div class="video-wrapper" style="border-radius: 10px; overflow: hidden; width: 100%; height: auto; aspect-ratio: 16/9; margin: 0 auto; padding: 0;">
-        <video width="100%" height="100%" autoplay muted loop playsinline style="object-fit: cover; display: block; margin: 0; padding: 0;">
-            <source src="/papers/Splat_MOVER_banner.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+<div id="papers-videos-applications-dexterity-section" style="display: none; margin-top: 20px;">
+    <div style="text-align: center;">
+        <figure>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/V4kobT9OGkc?si=KYQuC8E18SP4Z9DL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <figcaption><a href="https://armlabstanford.github.io/dynamic-cloth-detection">Dynamic Layer Detection of a Thin Silk Cloth using DenseTact Optical Tactile Sensors</a></figcaption>
+        </figure>
     </div>
-    <figcaption style="margin-top: 10px;">
-        <a href="https://splatmover.github.io/" target="_blank">Splat-MOVER: Multi-Stage, Open-Vocabulary Robotic Manipulation via Editable Gaussian Splatting</a>
-    </figcaption>
-</figure>
-
+    <div style="text-align: center;">
+        <figure>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/l-pjQV-se-o?si=zieX4MWXQQcdpZaF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <figcaption><a href="https://sites.google.com/view/inter-finger-manipulation">Inter-finger Small Object Manipulation with DenseTact Optical Tactile Sensor</a></figcaption>
+        </figure>
+    </div>
+    <div style="text-align: center;">
+        <figure>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4OtpI915GM?si=YfAPcUzLQ8IiuwTP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <figcaption><a href="https://sites.google.com/view/densetact-mini/">DenseTact-Mini: An Optical Tactile Sensor for Grasping Multi-Scale Objects From Flat Surfaces</a></figcaption>
+        </figure>
+    </div>
+    <div style="text-align: center;">
+        <figure>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4OtpI915GM?si=YfAPcUzLQ8IiuwTP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <figcaption><a href="https://sites.google.com/stanford.edu/embeddedobjectdetection/">Embedded Object Detection and Mapping in Soft Materials Using Optical Tactile Sensing</a></figcaption>
+        </figure>
+    </div>
+    <figure style="max-width: 75%; margin: 0 auto; text-align: center;">
+        <div class="video-wrapper" style="border-radius: 10px; overflow: hidden; width: 100%; height: auto; aspect-ratio: 16/9; margin: 0 auto; padding: 0;">
+            <video width="100%" height="100%" autoplay muted loop playsinline style="object-fit: cover; display: block; margin: 0; padding: 0;">
+                <source src="/papers/Splat_MOVER_banner.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <figcaption style="margin-top: 10px;">
+            <a href="https://splatmover.github.io/" target="_blank">Splat-MOVER: Multi-Stage, Open-Vocabulary Robotic Manipulation via Editable Gaussian Splatting</a>
+        </figcaption>
+    </figure>
+</div>
 ---
 
-### 2. **Scene Modeling: Visual Tactile Gaussian Splatting**
+### **<u>Scene Modeling: Visual Tactile Gaussian Splatting</u>**
 
 <div style="text-align: center;">
     <img src="/research_media/tgs.png" alt="Touch-GS mirror visualization" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
@@ -90,22 +89,38 @@ This research focuses on developing algorithms that integrate tactile data into 
 
 
 #### Papers and Videos:
-<div style="text-align: center;">
-    <figure>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/NHgb_16-Plg?si=2HuT-GOwpQpVynCc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <figcaption><a href="https://armlabstanford.github.io/next-best-sense">Next Best Sense: Guiding Vision and Touch with FisherRF for 3D Gaussian Splatting</a></figcaption>
-    </figure>
+
+<button onclick="toggleVisibility('papers-videos-scene-modeling-section')" style="background-color: #f1f1f1; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer; border-radius: 5px;">Show/Hide Papers and Videos</button>
+
+<div id="papers-videos-scene-modeling-section" style="display: none; margin-top: 20px;">
+    <div style="text-align: center;">
+        <figure>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/NHgb_16-Plg?si=2HuT-GOwpQpVynCc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <figcaption><a href="https://armlabstanford.github.io/next-best-sense">Next Best Sense: Guiding Vision and Touch with FisherRF for 3D Gaussian Splatting</a></figcaption>
+        </figure>
+    </div>
+    <div style="text-align: center;">
+        <figure>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/FqejaTEt7aU?si=YgAxC47mJvTiUGZT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <figcaption><a href="https://touch-gs.github.io/">Touch-GS: Visual-Tactile Supervised 3D Gaussian Splatting</a></figcaption>
+        </figure>
+    </div>
 </div>
 
-<div style="text-align: center;">
-    <figure>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/FqejaTEt7aU?si=YgAxC47mJvTiUGZT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <figcaption><a href="https://touch-gs.github.io/">Touch-GS: Visual-Tactile Supervised 3D Gaussian Splatting</a></figcaption>
-    </figure>
-</div>
+<script>
+function toggleVisibility(id) {
+    var element = document.getElementById(id);
+    if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+</script>
+
 ---
 
-### 3. **DenseTact Development**
+### **<u>DenseTact Development</u>**
 
 #### Description:
 We believe robotic dexterity is the catalyst challenge to having ubiqitous robots that may assist in caring for the elderly, manufacturing, agriculture and every task that requires tactile sensing and dexterity. 
@@ -134,27 +149,28 @@ This modular approach of mapping an image to the shape and forces on the surface
 </div>
 
 #### Papers and Videos:
-<div style="text-align: center;">
-    <figure>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4OtpI915GM?si=YfAPcUzLQ8IiuwTP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <figcaption><a href="https://sites.google.com/view/densetact-mini/">DenseTact-Mini: An Optical Tactile Sensor for Grasping Multi-Scale Objects From Flat Surfaces</a></figcaption>
-    </figure>
-</div>
+<button onclick="toggleVisibility('papers-videos-densetact-section')" style="background-color: #f1f1f1; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer; border-radius: 5px;">Show/Hide Papers and Videos</button>
 
-<div style="text-align: center;">
-    <figure>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/8kDZjkrEZkQ?si=xSUKwhwXmAUlwEjU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <figcaption><a href="https://ieeexplore.ieee.org/document/10161150">DenseTact 2.0: Optical Tactile Sensor for Shape and Force Reconstruction</a></figcaption>
-    </figure>
+<div id="papers-videos-densetact-section" style="display: none; margin-top: 20px;">
+    <div style="text-align: center;">
+        <figure>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4OtpI915GM?si=YfAPcUzLQ8IiuwTP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <figcaption><a href="https://sites.google.com/view/densetact-mini/">DenseTact-Mini: An Optical Tactile Sensor for Grasping Multi-Scale Objects From Flat Surfaces</a></figcaption>
+        </figure>
+    </div>
+    <div style="text-align: center;">
+        <figure>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/8kDZjkrEZkQ?si=xSUKwhwXmAUlwEjU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <figcaption><a href="https://ieeexplore.ieee.org/document/10161150">DenseTact 2.0: Optical Tactile Sensor for Shape and Force Reconstruction</a></figcaption>
+        </figure>
+    </div>
+    <div style="text-align: center;">
+        <figure>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/juVnSyvPKu8?si=FU7A3jkB478lBkI8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <figcaption><a href="https://ieeexplore.ieee.org/abstract/document/9811966">DenseTact: Optical Tactile Sensor for Dense Shape Reconstruction</a></figcaption>
+        </figure>
+    </div>
 </div>
-
-<div style="text-align: center;">
-    <figure>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/juVnSyvPKu8?si=FU7A3jkB478lBkI8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <figcaption><a href="https://ieeexplore.ieee.org/abstract/document/9811966">DenseTact: Optical Tactile Sensor for Dense Shape Reconstruction</a></figcaption>
-    </figure>
-</div>
-
 <!-- #### Image:
 ![Teleoperation with Haptic Feedback](/images/me.jpeg) -->
 
