@@ -7,6 +7,15 @@
   website: "https://touch-gs.github.io/"
   video: "/papers/tgs.mp4" # add your gif path here
   
+- title: "Next Best Sense: Guiding Vision and Touch with FisherRF for 3D Gaussian Splatting"
+  authors: "<b>Matthew Strong</b>*, Boshu Lei*, <b>Aiden Swann</b>, Wen Jiang, Kostas Daniilidis, <b>Monroe Kennedy III </b>"
+  venue: "arXiv"
+  date: "September 2024"
+  bibtex: "/papers/bibs/nbs2024.bib"
+  arxiv: "https://arxiv.org/abs/2410.04680"
+  website: "https://armlabstanford.github.io/next-best-sense"
+  video: "/papers/nbs_2024.mp4" # add your gif path here
+
 - title: "An Augmented Reality Interface for Teleoperating Robot Manipulators: Reducing Demonstrator Task Load through Digital Twin Control"
   authors: "<b> Aliyah Smith</b>, <b>Monroe Kennedy III </b>"
   venue: "arXiv"
