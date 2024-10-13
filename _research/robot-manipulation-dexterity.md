@@ -77,7 +77,7 @@ This research pushes the limits of robotic dexterity and embodied intelligence. 
 </div>
 
 #### Description:
-This research focuses on developing algorithms that integrate tactile data into Gaussian Splatting, a real-time explicit and photorealistic 3D representation. 
+This research focuses on developing algorithms that integrate tactile data into Gaussian Splatting, a real-time explicit and photorealistic 3D representation. These representations can be used to enable a robot to perform advanced manipulation tasks through semantic embedding and physical interaction prediction.
 
 
 <div class="video-wrapper" style="border-radius: 10px; overflow: hidden; width: 100%; height: auto; margin: 0 auto; text-align: center;">
