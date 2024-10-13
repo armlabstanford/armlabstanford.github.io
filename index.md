@@ -38,7 +38,7 @@ To be an effective teammate, the robot must be able to accurately model itself, 
     </div>
     <!-- Image 3 -->
     <div class="image-item" style="text-align: center; width: 300px;">
-        <a href="https://explorecourses.stanford.edu/search?view=catalog&filter-coursestatus-Active=on&page=0&catalog=&academicYear=&q=me314&collapse=" style="text-decoration: none; color: inherit;">
+        <a href="/courses/robotic-dexterity/" style="text-decoration: none; color: inherit;">
             <div class="image-wrapper" style="border-radius: 10px; overflow: hidden; width: 200px; height: auto; aspect-ratio: 1/1; margin: 0 auto;">
                 <img src="/images/robotic-dexterity-course.png" alt="Robotic Dexterity" style="width: 100%; height: 100%; object-fit: contain;">
             </div>

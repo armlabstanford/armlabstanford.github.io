@@ -17,18 +17,19 @@ function toggleVisibility(id) {
 }
 </script>
 
-<img src="{{ site.baseurl }}/courses_media/cobot_concept.jpeg" alt="Cobot Logo" style="width: 100%" />
+<div style="text-align: center;">
+    <img src="{{ site.baseurl }}/images/robotic-dexterity-course.png" alt="Robot Dexterity Logo" style="width: 50%;" />
+</div>
 
+## Robotic Dexterity
 
-## Collaborative Robotics
+This course covers fundamental principles of robotic dexterous manipulation, including kinematics, manipulator and gripper control, motion planning, contact modeling, and grasp stability. It explores robotic perception (vision and tactile) and advanced machine learning techniques (reinforcement learning and learning from demonstration). Students will apply these concepts in a hands-on group project using robotic manipulators for complex tasks. Homework assignments with both analytical and coding components will reinforce the concepts learned in class. Students should feel comfortable in Python and Linux (dual booting on a personal computer may be necessary for some assignments).
 
-This course focuses on how robots can be effective teammates with other robots and human partners. Concepts and tools will be reviewed for characterizing task objectives, robot perception and control, teammate behavioral modeling, inter-agent communication, and team consensus. We will consider the application of these tools to robot collaborators, wearable robotics, and the latest applications in the relevant literature. This is a project-based graduate course, with the implementation of algorithms in either python or C++. Recommended Prerequisite: AA 274A: Principles of Robot Autonomy I.
+<a href="https://explorecourses.stanford.edu/search?view=catalog&filter-coursestatus-Active=on&page=0&catalog=&academicYear=&q=me314&collapse=" target="_blank">Link to Stanford Explore Courses</a>
 
-<a href="https://explorecourses.stanford.edu/search?view=catalog&filter-coursestatus-Active=on&page=0&catalog=&academicYear=&q=me326&collapse=" target="_blank"> Link to Stanford Explore Courses </a>
-
-
-### Course Components
-
+<!-- ### Course Components
+TODO -->
+<!-- 
 <div style="text-align: center;">
     <img src="/courses_media/me326_structure.png" alt="structure of ME326 class" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
 </div>
@@ -66,4 +67,4 @@ This course focuses on how robots can be effective teammates with other robots a
   </ul>
 </div>
 
-
+ -->
