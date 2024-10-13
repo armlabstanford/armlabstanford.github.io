@@ -1,0 +1,42 @@
+<div class="paper-entry" style="display: flex; align-items: flex-start; gap: 20px;">
+    <div class="video-wrapper" style="flex: 2; max-width: 150px; margin-top: 50px">
+        <video width="100%" height="auto" autoplay muted loop style="border-radius: 5px;" playsinline>
+            <source src="{{ include.paper.video }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="paper-details" style="flex: 2;">
+        <h3 class="paper-title">
+            <strong>{{ include.paper.title }}</strong>
+        </h3>
+        <p class="paper-authors">
+            {{ include.paper.authors }}
+        </p>
+        <p class="paper-conference">
+            <em>{{ include.paper.venue }}</em>, {{ include.paper.date }}
+        </p>
+        <div class="paper-buttons" style="display: flex; gap: 10px; margin-top: 10px;">
+            {% if include.paper.website %}
+                <a href="{{ include.paper.website }}" class="button" style="background-color: #c83636; color:white">
+                    <i class="fas fa-link"></i> Website
+                </a>
+            {% endif %}
+            {% if include.paper.camera_ready %}
+                <a href="{{ include.paper.camera_ready }}" class="button" style="background-color: #c83636; color:white">
+                    <i class="fa-solid fa-camera"></i> Camera Ready
+                </a>
+            {% endif %}
+            {% if include.paper.arxiv %}
+                <a href="{{ include.paper.arxiv }}" class="button" style="background-color: #c83636; color:white">
+                    <i class="fas fa-newspaper"></i> arXiv
+                </a>
+            {% endif %}
+            {% if include.paper.bibtex %}
+                <a href="{{ include.paper.bibtex }}" class="button" style="background-color: #c83636; color:white">
+                    <i class="fas fa-file"></i> BibTeX
+                </a>
+            {% endif %}
+            
+        </div>
+    </div>
+</div>

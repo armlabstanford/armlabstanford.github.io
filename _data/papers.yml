@@ -1,0 +1,205 @@
+- title: "Touch-GS: Visual-Tactile Supervised 3D Gaussian Splatting"
+  authors: "<b>Aiden Swann*</b>, <b>Matthew Strong*</b>, <b>Won Kyung Do</b>, Gadiel Sznaier Camps, Mac Schwager, <b>Monroe Kennedy III</b>"
+  venue: " Proceedings of the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)"
+  date: "October 2024"
+  bibtex: "/papers/bibs/touch-gs.bib"
+  arxiv: "https://arxiv.org/abs/2403.09875"
+  website: "https://touch-gs.github.io/"
+  video: "/papers/tgs.mp4" # add your gif path here
+  
+- title: "Next Best Sense: Guiding Vision and Touch with FisherRF for 3D Gaussian Splatting"
+  authors: "<b>Matthew Strong</b>*, Boshu Lei*, <b>Aiden Swann</b>, Wen Jiang, Kostas Daniilidis, <b>Monroe Kennedy III </b>"
+  venue: "arXiv"
+  date: "September 2024"
+  bibtex: "/papers/bibs/nbs2024.bib"
+  arxiv: "https://arxiv.org/abs/2410.04680"
+  website: "https://armlabstanford.github.io/next-best-sense"
+  video: "/papers/nbs_2024.mp4" # add your gif path here
+
+- title: "An Augmented Reality Interface for Teleoperating Robot Manipulators: Reducing Demonstrator Task Load through Digital Twin Control"
+  authors: "<b> Aliyah Smith</b>, <b>Monroe Kennedy III </b>"
+  venue: "arXiv"
+  date: "September 2024"
+  bibtex: "/papers/bibs/ar_telop_aliyah_sept2024.bib"
+  arxiv: "https://arxiv.org/abs/2409.18394"
+  website: "https://youtu.be/w-M58ohPgrA"
+  video: "/papers/lfd_ar_9_2024.mp4" # add your gif path here
+
+- title: "Dynamic Layer Detection of a Thin Silk Cloth using DenseTact Optical Tactile Sensors"
+  authors: "<b>Camille Chungyuon</b>, <b>Ankush Kundan Dhawan</b>, <b>Karina Ting</b>, <b>Monroe Kennedy III </b>"
+  venue: "arXiv"
+  date: "September 2024"
+  bibtex: "/papers/bibs/dynamic_cloth_2024.bib"
+  arxiv: "https://arxiv.org/abs/2409.09849"
+  website: "https://armlabstanford.github.io/dynamic-cloth-detection"
+  video: "/papers/dynamic_cloth_3layer_2024.mp4" # add your gif path here
+
+- title: "SAFER-Splat: A Control Barrier Function for Safe Navigation with Online Gaussian Splatting Maps"
+  authors: "Timothy Chen, <b>Aiden Swann</b>, Javier Yu, Ola Shorinwa, Riku Murai,  <b>Monroe Kennedy III</b>, Mac Schwager "
+  venue: "arXiv"
+  date: "September 2024"
+  bibtex: "/papers/bibs/safe_splat2024.bib"
+  arxiv: "https://arxiv.org/abs/2409.09868"
+  website: "https://chengine.github.io/safer-splat/"
+  video: "/papers/teaser_safer_splat2024.mp4" # add your gif path here
+
+- title: "Splat-MOVER: Multi-Stage, Open-Vocabulary Robotic Manipulation via Editable Gaussian Splatting"
+  authors: "Ola Shorinwa, Johnathan Tucker, <b>Aliyah Smith</b>, <b>Aiden Swann</b>, Timothy Chen, Roya Firoozi,  <b>Monroe Kennedy III</b>, Mac Schwager"
+  venue: "CoRL"
+  date: "September 2024"
+  bibtex: "/papers/bibs/splat_mover.bib"
+  arxiv: "https://arxiv.org/abs/2405.04378"
+  website: "https://splatmover.github.io/"
+  video: "/papers/Splat_MOVER_banner.mp4" # add your gif path here
+
+- title: "ProACT: An Augmented Reality Testbed for Intelligent Prosthetic Arms"
+  authors: "<b>Shivani Guptasarma</b>, <b>Monroe Kennedy III</b>"
+  venue: "arXiv"
+  date: "July 2024"
+  bibtex: "/papers/bibs/proact.bib"
+  arxiv: "https://arxiv.org/abs/2407.05025"
+  website: "https://armlabstanford.github.io/proact"
+  video: "/papers/proact_all_methods_compressed.mp4" # add your gif path here
+
+- title: "DenseTact-Mini: An Optical Tactile Sensor for Grasping Multi-Scale Objects From Flat Surfaces"
+  authors: "<b> Won Kyung Do</b>, <b>Ankush Dhawan</b>, <b>Mathilda Kitzmann</b>, <b>Monroe Kennedy III </b>"
+  venue: "International Conference on Robotics and Automation (ICRA)"
+  date: "May 2024"
+  bibtex: "/papers/bibs/dt-mini.bib"
+  arxiv: "https://arxiv.org/abs/2309.08860"
+  camera_ready: "https://ieeexplore.ieee.org/document/10610583"
+  website: "https://sites.google.com/view/densetact-mini/"
+  video: "/papers/dtmini2.mp4" # add your gif path here
+
+- title: "Embedded Object Detection and Mapping in Soft Materials Using Optical Tactile Sensing"
+  authors: "<b>Jose A. Solano-Castellanos</b>, <b>Won Kyung Do</b> ,  <b>Monroe Kennedy III</b>"
+  venue: "SN Computer Science"
+  date: "March 2024"
+  bibtex: "/papers/bibs/dt_embedded_2024.bib"
+  camera_ready: "https://link.springer.com/article/10.1007/s42979-024-02731-6"
+  website: "https://sites.google.com/stanford.edu/embeddedobjectdetection/"
+  video: "/papers/dt_embedded_clip.mp4" # add your gif path here
+
+- title: "EgoNav: Egocentric Scene-aware Human Trajectory Prediction"
+  authors: "<b>Weizhuo Wang</b>, C. Karen Liu, <b>Monroe Kennedy III</b>"
+  venue: "arXiv"
+  date: "March 2024"
+  bibtex: "/papers/bibs/egonav2024.bib"
+  arxiv: "https://arxiv.org/abs/2403.19026"
+  website: "http://mmego.weizhuowang.com/"
+  video: "/papers/ego_nav2024.mp4" # add your gif path here
+
+## 2023
+- title: "Inter-finger Small Object Manipulation With DenseTact Optical Tactile Sensor"
+  authors: "<b> Won Kyung Do</b>,  <b>Bianca Aumann</b>,  <b>Camille Chungyoun</b>, <b>Monroe Kennedy III </b>"
+  venue: "IEEE Robotics and Automation Letters"
+  date: "November 2023"
+  bibtex: "/papers/bibs/interfinger_dt.bib"
+  arxiv: "https://arxiv.org/abs/2308.16480"
+  camera_ready: "https://ieeexplore.ieee.org/document/10321631"
+  website: "https://sites.google.com/view/inter-finger-manipulation"
+  video: "/papers/interfinger_dt.mp4" # add your gif path here
+
+
+- title: "The role of collaborative robotics in assistive and rehabilitation applications"
+  authors: "<b>Monroe Kennedy III </b>"
+  venue: "Science Robotics"
+  date: "October 2023"
+  bibtex: "/papers/bibs/collab_rob2023.bib"
+  camera_ready: "https://www.science.org/doi/full/10.1126/scirobotics.adk6743"
+
+- title: "Diffusion Co-Policy for Synergistic Human-Robot Collaborative Tasks"
+  authors: "<b>Eley Ng</b>,  <b>Ziang Liu</b>, <b>Monroe Kennedy III </b>"
+  venue: "IEEE Robotics and Automation Letters"
+  date: "November 2023"
+  bibtex: "/papers/bibs/diffusion_collab_eley_2023.bib"
+  arxiv: "https://arxiv.org/abs/2305.12171"
+  camera_ready: "https://ieeexplore.ieee.org/abstract/document/10310116"
+  website: "https://sites.google.com/view/diffusion-co-policy-hrc"
+  video: "/papers/hrcc.mp4" # add your gif path here
+
+- title: "It Takes Two: Learning to Plan for Human-Robot Cooperative Carrying"
+  authors: "<b>Eley Ng</b>,  <b>Ziang Liu</b>, <b>Monroe Kennedy III </b>"
+  venue: "2023 IEEE International Conference on Robotics and Automation (ICRA)"
+  date: "May 2023"
+  bibtex: "/papers/bibs/itTakesTwo.bib"
+  arxiv: "https://arxiv.org/abs/2209.12890"
+  camera_ready: "https://ieeexplore.ieee.org/document/10161386"
+  website: "https://sites.google.com/view/cooperative-carrying"
+  video: "/papers/itTakesTwo.mp4" # add your gif path here
+
+
+- title: "Trajectory and Sway Prediction Towards Fall Prevention"
+  authors: "<b>Weizhuo Wang</b>, Michael Raitor, Steve Collins, C. Karen Liu, <b>Monroe Kennedy III </b>"
+  venue: "2023 IEEE International Conference on Robotics and Automation (ICRA)"
+  date: "May 2023"
+  bibtex: "/papers/bibs/fall_prev_sway_cov.bib"
+  arxiv: "https://arxiv.org/abs/2209.11886"
+  camera_ready: "https://ieeexplore.ieee.org/document/10161361"
+  website: "https://youtu.be/I8On2oFcvhY?si=uSy-8vSHQWV7ofOO"
+  video: "/papers/smart_belt_fall_prev_sway_cov.mp4" # add your gif path here
+
+
+
+- title: "DenseTact 2.0: Optical Tactile Sensor for Shape and Force Reconstruction"
+  authors: " <b>Won Kyung Do</b>, <b>Bianca Jurewicz</b>, <b>Monroe Kennedy III </b>"
+  venue: "2023 IEEE International Conference on Robotics and Automation (ICRA)"
+  date: "May 2023"
+  bibtex: "/papers/bibs/dtv2.bib"
+  arxiv: "https://arxiv.org/abs/2209.10122"
+  camera_ready: "https://ieeexplore.ieee.org/document/10161150"
+  website: "https://youtu.be/8kDZjkrEZkQ?si=ir3cb8AKsmkfHg7F"
+  video: "/papers/dt2.mp4" # add your gif path here
+
+- title: "DenseTact: Optical Tactile Sensor for Dense Shape Reconstruction"
+  authors: "<b> Won Kyung Do</b>, <b>Monroe Kennedy III </b>"
+  venue: "International Conference on Robotics and Automation (ICRA)"
+  date: "May 2022"
+  bibtex: "/papers/bibs/dtv1.bib"
+  arxiv: "https://arxiv.org/abs/2201.01367"
+  camera_ready: "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9811966"
+  website: "https://youtu.be/nhQzhsjbcQA?si=ufHSxqL9lnG4P5ed"
+  video: "/papers/dtv1.mp4" # add your gif path here
+
+- title: "Considerations for the Control Design of Augmentative Robots"
+  authors: "<b>Shivani Guptasarma</b>, <b>Monroe Kennedy III </b>"
+  venue: "arXiv"
+  date: "October 2023"
+  bibtex: "/papers/bibs/consider_aug_rob.bib"
+  arxiv: "https://arxiv.org/abs/2310.19336"
+
+- title: "Replay Overshooting: Learning Stochastic Latent Dynamics with the Extended Kalman Filter"
+  authors: " <b>Monroe Kennedy III </b>"
+  venue: "2021 IEEE International Conference on Robotics and Automation (ICRA)"
+  date: "May 2023"
+  bibtex: "/papers/bibs/replay_overshoot.bib"
+  arxiv: "https://alberthli.github.io/files/conference/ro_final.pdf"
+  camera_ready: "https://ieeexplore.ieee.org/abstract/document/9560811"
+  website: "https://youtu.be/WbYPJVd8FFI"
+  video: "/papers/replay_overshoot.mp4" # add your gif path here
+
+- title: "Recent Development in Human Motion and Gait Prediction"
+  authors: "<b>Junwu Zhang</b>, <b>Monroe Kennedy III </b>"
+  venue: "RSS 2020 Workshop RobRetro"
+  date: "June 2020"
+  bibtex: "/papers/bibs/human_gait_pred2020.bib"
+  camera_ready: "https://openreview.net/forum?id=4i6Twi16jxS"
+
+- title: "Modeling And Control For Robotic Assistants: Single And Multi-Robot Manipulation"
+  authors: " <b>Monroe Kennedy III </b>"
+  venue: "University of Pennsylvania"
+  date: "May 2019"
+  bibtex: "/papers/bibs/kennedy_thesis.bib"
+  camera_ready: "https://repository.upenn.edu/entities/publication/3befc894-2c95-4279-b09d-d2973ae6ffe0"
+
+
+# - title: ""
+#   authors: " <b>Monroe Kennedy III </b>"
+#   venue: ""
+#   date: "May 2023"
+#   bibtex: "/papers/bibs/.bib"
+#   arxiv: ""
+#   camera_ready: ""
+#   website: ""
+#   video: "/papers/.mp4" # add your gif path here
+

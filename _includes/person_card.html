@@ -1,0 +1,29 @@
+<div class="person-card">
+    <img src="images/{{ include.person.image }}" alt="{{ include.person.name }}" class="profile-image">
+    <div class="person-info">
+        <div class="name-and-icons" style="display: flex; align-items: center; justify-content: space-between; white-space: nowrap;">
+            <h2 class="person-name" style="margin-right: 10px;">{{ include.person.name }}</h2>
+            <div class="social-icons" style="display: flex; gap: 10px; margin-bottom: 20px;">
+                {% if include.person.website %}
+                    <a href="{{ include.person.website }}"><i class="fas fa-home"></i></a>
+                {% endif %}
+                {% if include.person.github %}
+                    <a href="https://github.com/{{ include.person.github }}"><i class="fab fa-github"></i></a>
+                {% endif %}
+                {% if include.person.linkedin %}
+                    <a href="{{ include.person.linkedin }}"><i class="fa fa-linkedin"></i></a>
+                {% endif %}
+                {% if include.person.scholar %}
+                    <a href="https://scholar.google.com/citations?user={{ include.person.scholar }}&hl=en"><i class="fas fa-graduation-cap"></i></a>
+                {% endif %}
+            </div>
+        </div>
+        <p class="person-description">
+            {% if include.person.summary %}
+                {{ include.person.summary }}
+            {% else %}
+                {{ include.person.excerpt }}
+            {% endif %}
+        </p>
+    </div>
+</div>
