@@ -48,4 +48,28 @@ tags: research
             </a>
         </div>
     </div>
+    <h2>ARMLab Sponsors</h2>
+    <p>
+        We are very grateful for our sponsors support!
+    </p>
+    <!-- Sponsor Logos Grid -->
+    <!-- <div class="sponsor-logos" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; text-align: center; align-items: center; margin-top: 20px;"> -->
+    <div class="sponsor-logos" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; text-align: center; align-items: center; margin-top: 20px;">
+        <figure>
+            <img src="/armlab_donors/nsf_logo.png" alt="National Science Foundation" style="max-width: 100%; height: auto;">
+        </figure>
+        <figure>
+            <img src="/armlab_donors/amazon_robotics_logo.png" alt="Amazon Robotics" style="max-width: 100%; height: auto;">
+        </figure>
+        <figure>
+            <img src="/armlab_donors/NIH_NIA.png" alt="NIH-NIA" style="max-width: 100%; height: auto;">
+        </figure>
+        <figure>
+            <img src="/armlab_donors/wu_tsai_human_perf_alliance.png" alt="Wu Tsai Human Performance Alliance Stanford University" style="max-width: 100%; height: auto;">
+        </figure>
+        <figure>
+            <img src="/armlab_donors/hai_stanford.png" alt="Human-Centered Artificial Intelligence" style="max-width: 100%; height: auto;">
+        </figure>
+        <!-- Add more figures for additional logos as needed -->
+    </div>
 </div>
