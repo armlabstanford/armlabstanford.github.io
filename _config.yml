@@ -92,6 +92,9 @@ collections:
   publications:
     output: true
     permalink: /publications/:path/
+  courses:
+    output: true
+    permalink: /courses/:path/
 
 text:
   pagination:
