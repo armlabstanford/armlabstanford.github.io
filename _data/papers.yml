@@ -80,7 +80,7 @@
   website: "http://mmego.weizhuowang.com/"
   video: "/papers/ego_nav2024.mp4" # add your gif path here
 
-
+## 2023
 - title: "Inter-finger Small Object Manipulation With DenseTact Optical Tactile Sensor"
   authors: "<b> Won Kyung Do</b>,  <b>Bianca Aumann</b>,  <b>Camille Chungyoun</b>, <b>Monroe Kennedy III </b>"
   venue: "IEEE Robotics and Automation Letters"
@@ -108,18 +108,6 @@
   camera_ready: "https://ieeexplore.ieee.org/abstract/document/10310116"
   website: "https://sites.google.com/view/diffusion-co-policy-hrc"
   video: "/papers/hrcc.mp4" # add your gif path here
-
-
-- title: "DenseTact-Mini: An Optical Tactile Sensor for Grasping Multi-Scale Objects From Flat Surfaces"
-  authors: "<b> Won Kyung Do</b>,  <b>Ankush Kundan Dhawan</b>, <b>Mathilda Kitzmann</b>, <b>Monroe Kennedy III </b>"
-  venue: "International Conference on Robotics and Automation (ICRA) <b>[Nominated Best Paper]</b>"
-  date: "May 2024"
-  bibtex: "/papers/bibs/dt_mini2024.bib"
-  arxiv: "https://arxiv.org/abs/2309.08860"
-  camera_ready: "https://ieeexplore.ieee.org/abstract/document/10610583"
-  website: "https://sites.google.com/view/densetact-mini/"
-  video: "/papers/dt_mini2024.mp4" # add your gif path here
-
 
 - title: "It Takes Two: Learning to Plan for Human-Robot Cooperative Carrying"
   authors: "<b>Eley Ng</b>,  <b>Ziang Liu</b>, <b>Monroe Kennedy III </b>"

@@ -27,7 +27,7 @@ This research pushes the limits of robotic dexterity and embodied intelligence. 
     </video>
 </div>
 
-#### Papers and Videos:
+#### <span style="color: red;">Papers and Videos:</span> 
 
 <button onclick="toggleVisibility('papers-videos-applications-dexterity-section')" style="background-color: #f1f1f1; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer; border-radius: 5px;">Show/Hide Papers and Videos</button>
 
@@ -52,7 +52,7 @@ This research pushes the limits of robotic dexterity and embodied intelligence. 
     </div>
     <div style="text-align: center;">
         <figure>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/Z4OtpI915GM?si=YfAPcUzLQ8IiuwTP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/9hfDPeI5tr0?si=xL1wENwnodZQfL2v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             <figcaption><a href="https://sites.google.com/stanford.edu/embeddedobjectdetection/">Embedded Object Detection and Mapping in Soft Materials Using Optical Tactile Sensing</a></figcaption>
         </figure>
     </div>
@@ -88,7 +88,7 @@ This research focuses on developing algorithms that integrate tactile data into 
 </div>
 
 
-#### Papers and Videos:
+#### <span style="color: red;">Papers and Videos:</span> 
 
 <button onclick="toggleVisibility('papers-videos-scene-modeling-section')" style="background-color: #f1f1f1; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer; border-radius: 5px;">Show/Hide Papers and Videos</button>
 
@@ -129,7 +129,6 @@ To address this challenge, we developed the optical tactile sensor DenseTact (<a
 
 This modular approach of mapping an image to the shape and forces on the surface of the sensor accelerates dexterous applications that can take these outputs (raw image, shape reconstruction, forces) and perform down-stream advanced manipulation tasks.
 
-<!-- #### Video: -->
 <div style="display: flex; justify-content: center; gap: 20px;">
     <figure style="text-align: center;">
         <img src="/research_media/dt2_exploded_view.png" alt="DenseTact2.0 exploaded view" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
@@ -148,7 +147,8 @@ This modular approach of mapping an image to the shape and forces on the surface
     </video>
 </div>
 
-#### Papers and Videos:
+#### <span style="color: red;">Papers and Videos:</span> 
+
 <button onclick="toggleVisibility('papers-videos-densetact-section')" style="background-color: #f1f1f1; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer; border-radius: 5px;">Show/Hide Papers and Videos</button>
 
 <div id="papers-videos-densetact-section" style="display: none; margin-top: 20px;">
@@ -171,8 +171,6 @@ This modular approach of mapping an image to the shape and forces on the surface
         </figure>
     </div>
 </div>
-<!-- #### Image:
-![Teleoperation with Haptic Feedback](/images/me.jpeg) -->
 
 ---
 
