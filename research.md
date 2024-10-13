@@ -20,19 +20,19 @@ tags: research
                         Your browser does not support the video tag.
                     </video>
                 </div>
-                <h3 style="color: #c83636;">Robotic Intent Estimation and Wearables</h3>
+                <h3 style="color: #c83636;">Intent Estimation, Wearables and Teleoperation</h3>
             </a>
         </div>
         <!-- Video 2 (Square aspect ratio) -->
         <div class="video-item" style="text-align: center; width: 300px;">
-            <a href="/research/robot-manipulation-teleoperation" style="text-decoration: none; color: inherit;">
+            <a href="/research/robot-manipulation-dexterity" style="text-decoration: none; color: inherit;">
                 <div class="video-wrapper" style="border-radius: 10px; overflow: hidden; width: 200px; height: 200px; aspect-ratio: 1/1; margin: 0 auto;">
                     <video width="100%" height="100%" autoplay muted loop playsinline style="object-fit: cover;">
                         <source src="/papers/inter.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
-                <h3 style="color: #c83636;">Robot Manipulation and Teleoperation</h3>
+                <h3 style="color: #c83636;">Robot Manipulation and Dexterity</h3>
             </a>
         </div>
         <!-- Video 3 -->

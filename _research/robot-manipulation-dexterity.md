@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Robot Manipulation and Teleoperation
+title: Robot Manipulation and Dexterity
 date: 2014-06-08 11:21:29
-summary: Research on advanced robot manipulation techniques and teleoperation systems.
-categories: robotics research teleoperation
+summary: Research on advanced robot manipulation techniques and dexterity.
+categories: robotics research dexterity
 ---
 
-## Robot Manipulation and Teleoperation
+## Robot Manipulation and Dexterity
 
 This page shows ARMLab advances in robotic dexterity both in mechanical design of robotic fingertips and applications enabled by embodied intelligence.
 
