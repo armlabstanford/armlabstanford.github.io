@@ -33,6 +33,8 @@ ARMLab performs research in advancing the capabilites of autonomous robots and m
 ### Description:
 In this work we investigate instances where a human and robot may have shared control or need to transition control of the motion of a robot or vehicle. The robot must understand the scene and potential danger, and when necessary take control from the human to maintain safety. The robot should also make its strategy legible to the human for the human to take over if necessary and hand-over control safely.
 
+For collaboration, it is often necessary that the behavior of the teammate (human or robot) be modeled for prediction towards collaboration. This requires understanding the teammates observation capabilities, policy, and control authority in the context of the mutual task.
+
 <div style="text-align: center;">
     <img src="/research_media/shared_autonomy_concept2020.png" alt="Control Diagram for Shared Autonomy" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
 </div>
@@ -41,6 +43,13 @@ In this work we investigate instances where a human and robot may have shared co
 <div class="video-wrapper" style="border-radius: 10px; overflow: hidden; width: 100%; height: auto; aspect-ratio: 16/9; margin: 0 auto; padding: 0;">
     <video width="100%" height="100%" autoplay muted loop playsinline style="object-fit: cover; display: block; margin: 0; padding: 0;">
         <source src="/papers/teaser_safer_splat2024.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+<div class="video-wrapper" style="border-radius: 10px; overflow: hidden; width: 100%; height: auto; aspect-ratio: 16/9; margin: 0 auto; padding: 0;">
+    <video width="100%" height="100%" autoplay muted loop playsinline style="object-fit: cover; display: block; margin: 0; padding: 0;">
+        <source src="/papers/car_visual_field.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 </div>
@@ -59,6 +68,17 @@ In this work we investigate instances where a human and robot may have shared co
         </div>
         <figcaption style="margin-top: 10px;">
             <a href="https://chengine.github.io/safer-splat/" target="_blank">SAFER-Splat: Safety with Control Barrier Functions in Online Gaussian Splatting Maps</a>
+        </figcaption>
+    </figure>
+    <figure style="max-width: 75%; margin: 0 auto; text-align: center;">
+        <div class="video-wrapper" style="border-radius: 10px; overflow: hidden; width: 100%; height: auto; aspect-ratio: 16/9; margin: 0 auto; padding: 0;">
+            <video width="100%" height="100%" autoplay muted loop playsinline style="object-fit: cover; display: block; margin: 0; padding: 0;">
+                <source src="/papers/car_visual_field.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <figcaption style="margin-top: 10px;">
+            <a href="https://armlabstanford.github.io/HRMotion_RestrictedView" target="_blank">Understanding and Imitating Human-Robot Motion with Restricted Visual Fields</a>
         </figcaption>
     </figure>
 </div>
