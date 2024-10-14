@@ -21,7 +21,7 @@
   authors: "Maulik Bhatt, <b>HongHao Zhen</b>, <b>Monroe Kennedy III </b>, Negar Mehr"
   venue: "arXiv"
   date: "September 2024"
-  bibtex: "/papers/bibs/nbs2024.bib"
+  bibtex: "/papers/bibs/restricted_vis_field.bib"
   arxiv: "https://arxiv.org/abs/2410.05547"
   website: "https://armlabstanford.github.io/HRMotion_RestrictedView"
   video: "/papers/car_visual_field.mp4" # add your gif path here
