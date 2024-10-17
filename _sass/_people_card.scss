@@ -30,6 +30,13 @@
     flex: 1;
 }
 
+@media (max-width: 600px) {
+    .name-and-icons {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
 .person-name {
     font-size: 1.5em;
     color: #000000; /* Match the green color in the example */
