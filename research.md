@@ -8,7 +8,7 @@ tags: research
 <div class="research-section">
     <h1>Research</h1>
     <p>
-        Our mission is to develop theoretical foundations and practical algorithms for interactive robot learning. Our group is focused on formalizing interactions and how to learn from diverse sources of data to build sample-efficient, human-aligned, and interactive robot policies. We leverage tools from machine learning, control theory, and cognitive science for building robots that can seamlessly coordinate with, collaborate with, compete with, or influence humans.
+        The broad research objective of the Assistive Robotics and Manipulation Lab is to develop robots that improve everyday life by anticipating and acting on the needs of human counterparts. We specialize in developing intelligent robotic systems that can perceive and model environments, humans, and tasks and leverage these models to predict system processes and understand their assistive role. The research can be divided into the following sub-categories: intent estimation with wearables and teleoperation, robotic manipulation and dexterity, and robotic autonomy and collaboration.
     </p>
     <div class="video-gallery" style="display: flex; gap: 20px; justify-content: center;">
         <!-- Video 1 -->
@@ -50,10 +50,9 @@ tags: research
     </div>
     <h2>ARMLab Sponsors</h2>
     <p>
-        We are very grateful for our sponsors support!
+        We are very grateful for our sponsors' support!
     </p>
     <!-- Sponsor Logos Grid -->
-    <!-- <div class="sponsor-logos" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; text-align: center; align-items: center; margin-top: 20px;"> -->
     <div class="sponsor-logos" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; text-align: center; align-items: center; margin-top: 20px;">
         <figure>
             <img src="/armlab_donors/nsf_logo.png" alt="National Science Foundation" style="max-width: 100%; height: auto;">
